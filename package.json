@@ -1,0 +1,66 @@
+{
+  "name": "ngx-smartadmin",
+  "version": "0.1.0",
+  "description": "The angular components with smartadmin.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "ngc": "ngc -p tsconfig-aot.json",
+    "build:aot": "webpack --config build/webpack.aot.conf.js",
+    "rollup": "rollup -c build/rollup-config.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HstarComponents/ngx-smartadmin.git"
+  },
+  "keywords": [
+    "Angular",
+    "SmartAdmin",
+    "Components"
+  ],
+  "author": "Jay.M.Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HstarComponents/ngx-smartadmin/issues"
+  },
+  "homepage": "https://github.com/HstarComponents/ngx-smartadmin#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/animations": "^4.2.3",
+    "@angular/common": "^4.2.3",
+    "@angular/compiler": "^4.2.3",
+    "@angular/compiler-cli": "^4.2.3",
+    "@angular/core": "^4.2.3",
+    "@angular/forms": "^4.2.3",
+    "@angular/http": "^4.2.3",
+    "@angular/platform-browser": "^4.2.3",
+    "@angular/platform-browser-dynamic": "^4.2.3",
+    "@angular/platform-server": "^4.2.3",
+    "@angular/router": "^4.2.3",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.3",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "^2.28.0",
+    "jest": "^20.0.4",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.10",
+    "rollup": "^0.43.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rxjs": "^5.4.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "typescript": "^2.3.4",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-merge": "^4.1.0",
+    "zone.js": "^0.8.12"
+  }
+}
