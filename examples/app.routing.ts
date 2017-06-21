@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './pages';
+import { HomeComponent } from './pages';
 
 const routes: Routes = [
-  { path: 'dist', component: AppComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
 
-export const routedComponents = [AppComponent];
+}

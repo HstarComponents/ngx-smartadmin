@@ -5,7 +5,8 @@ const util = require('./util');
 
 module.exports = webpackMerge(baseConfig, {
   entry: {
-    'build': './examples/main-jit.ts'
+    'build': './examples/main-jit.ts',
+    'ngx-smartadmin': './src/index.ts'
   },
   output: {
     path: util.root('dist'),
