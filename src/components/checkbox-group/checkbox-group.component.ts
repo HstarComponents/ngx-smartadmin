@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'checkbox-group',
+	selector: 'sa-checkbox-group',
 	templateUrl: 'checkbox-group.component.html'
 })
 
