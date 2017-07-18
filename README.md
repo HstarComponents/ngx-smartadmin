@@ -1,15 +1,23 @@
 # ngx-smartadmin
 The angular components for smart-admin.
 
-# How to start?
+# How to develop?
 
 ```bash
-# clone the project
-git clone
+git clone 
 
 # install deps
-npm i
+npm i 
 
 # run dev
 npm run dev
+
+# build demo
+npm run build
+
+# build aot demo
+npm run build:aot
+
+# build publish package
+npm run publish
 ```

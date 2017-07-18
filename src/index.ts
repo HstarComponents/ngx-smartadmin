@@ -1,1 +1,5 @@
-export * from './ngx-smartadmin.module';
+import { SmartAdminModule } from './smartadmin.module';
+
+export {
+  SmartAdminModule
+};

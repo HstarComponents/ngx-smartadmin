@@ -8,6 +8,8 @@
     "experimentalDecorators": true,
     "lib": [
       "es2015",
+      "es2016",
+      "es2017",
       "dom"
     ],
     "noImplicitAny": true,
@@ -17,10 +19,12 @@
     ]
   },
   "include": [
-    "./examples/**/*.ts",
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "./examples/**/*.ts"
   ],
   "exclude": [
+    "**/*.spec.ts",
+    "./examples/main-aot.ts",
     "./examples/**/*.spec.ts"
   ]
 }
