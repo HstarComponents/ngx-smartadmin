@@ -12,7 +12,7 @@
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "cleanlib": "node build/cleanlib.js",
     "ngc": "ngc -p tsconfig-aot.json",
-    "publish": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
+    "lib": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
     "build": "webpack --config build/webpack.prod.conf.js",
     "build:aot": "npm run cleanlib && ngc -p tsconfig-demo-aot.json && webpack --config build/webpack.aot.conf.js",
     "test": "test"

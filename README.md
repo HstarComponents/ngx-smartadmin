@@ -19,5 +19,5 @@ npm run build
 npm run build:aot
 
 # build publish package
-npm run publish
+npm run lib
 ```
