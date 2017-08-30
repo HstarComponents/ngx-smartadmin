@@ -16,6 +16,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ProgressComponent } from './progress/progress.component';
 import { TableComponent } from './table/table.component';
 import { TableColumnDirective } from './table/table-column.directive';
+import { TableCellDirective } from './table/column-cell.directive';
 import { TabsetComponent } from './tabset/tabset.component';
 import { TabItemComponent } from './tabset/tab-item.component';
 import { WidgetComponent } from './widget/widget.component';
@@ -33,7 +34,7 @@ export const ALL_COMPONENTS = [
   ModalComponent,
   PaginationComponent,
   ProgressComponent,
-  TableComponent, TableColumnDirective,
+  TableComponent, TableColumnDirective, TableCellDirective,
   TabsetComponent, TabItemComponent,
   WidgetComponent,
   WizardComponent
