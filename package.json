@@ -2,8 +2,8 @@
   "name": "ngx-smartadmin",
   "version": "0.1.0",
   "description": "The angular components with smartadmin.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/ngx-smartadmin.js",
+  "types": "types",
   "directories": {
     "doc": "docs",
     "example": "examples"
@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "cleanlib": "node build/cleanlib.js",
-    "publish": "npm run cleanlib && ngc -p tsconfig-aot.json",
+    "ngc": "ngc -p tsconfig-aot.json",
+    "publish": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
     "build": "webpack --config build/webpack.prod.conf.js",
     "build:aot": "npm run cleanlib && ngc -p tsconfig-demo-aot.json && webpack --config build/webpack.aot.conf.js",
     "test": "test"
@@ -32,6 +33,11 @@
   },
   "homepage": "https://github.com/HstarComponents/ngx-smartadmin#readme",
   "dependencies": {},
+  "peerDependencies": {
+    "@angular/core": "^4.3.6",
+    "@angular/common": "^4.3.6",
+    "@angular/forms": "^4.3.6"
+  },
   "devDependencies": {
     "@angular/common": "^4.3.6",
     "@angular/compiler": "^4.3.6",
