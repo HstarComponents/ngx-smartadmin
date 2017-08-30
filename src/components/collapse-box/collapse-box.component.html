@@ -1,0 +1,12 @@
+<div class="sa-collapse-box">
+  <div class="collapse-box-header">
+    <b (click)="onHeaderClick()">{{header}} 
+      <i class="fa" [ngClass]="{'fa-angle-double-left': innerCollapsed, 'fa-angle-double-down': !innerCollapsed}"></i>
+    </b>
+    <span></span>
+  </div>
+  <div class="collapse-box-content" [hidden]="innerCollapsed">
+    <ng-content></ng-content>
+  </div>
+  <div class="clearfix"></div>
+</div>

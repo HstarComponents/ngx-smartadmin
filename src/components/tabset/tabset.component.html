@@ -1,0 +1,8 @@
+<ul class="sa-tabset nav nav-tabs bordered">
+  <li class="active" *ngFor="let tab of tabItems" [ngClass]="{active: tab.active}" (click)="setActiveItem(tab)">
+    <a href="javascript:;"> <i *ngIf="tab.icon" [ngClass]="tab.icon"></i> {{tab.header}}</a>
+  </li>
+</ul>
+<div class="sa-tabset tab-content padding-10">
+  <ng-content></ng-content>
+</div>

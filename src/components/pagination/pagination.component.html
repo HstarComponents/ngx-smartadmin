@@ -1,0 +1,11 @@
+<ul class="sa-pagination pagination" [ngClass]="paginationClass">
+  <li [ngClass]="{disabled: pageIndex <= 1}" (click)="pageClick(pageIndex - 1)">
+    <a href="javascript:;"><i class="fa fa-chevron-left"></i></a>
+  </li>
+  <li *ngFor="let p of pages" [ngClass]="{'active': pageIndex === p.value}" (click)="pageClick(p.value)">
+    <a href="javascript:void(0);">{{p.text}}</a>
+  </li>
+  <li [ngClass]="{disabled: pageIndex >= pageCount}" (click)="pageClick(pageIndex + 1)">
+    <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+  </li>
+</ul>

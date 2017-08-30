@@ -1,0 +1,3 @@
+<div class="sa-rating rating">
+  <label *ngFor="let v of rateArr" [ngClass]="{active: v <= value, hover: v <= hoverIdx}" (click)="onClick(v)" (mouseenter)="onMouseEnter(v)" (mouseleave)="onMouseLeave(v)"><i [ngClass]="rateClass"></i></label>
+</div>

@@ -1,0 +1,7 @@
+<div class="sa-alert alert fade in" [ngClass]="innerClass"  [hidden]="!shown">
+  <button class="close" *ngIf="showCloseBtn" (click)="btnCloseClick()">×</button>
+  <h4 class="alert-heading">
+    <ng-content select="[slot=alert-heading]"></ng-content>
+  </h4>
+  <ng-content></ng-content>
+</div>

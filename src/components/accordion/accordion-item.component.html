@@ -1,0 +1,15 @@
+<div class="sa-accordion-item panel panel-default">
+  <div class="panel-heading" (click)="changeActiveStatus()">
+    <h4 class="panel-title">
+      <a href="javascript:;" [ngClass]="{collapsed: !active}">
+        <i class="fa fa-lg fa-angle-down pull-right"></i>
+        <i class="fa fa-lg fa-angle-up pull-right"></i> {{header}}
+      </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" [ngClass]="{in: active}">
+    <div class="panel-body no-padding">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="sa-modal" [ngClass]="{'sa-modal-drag': allowDrag}">
+  <div class="modal animated" [ngClass]="animate">
+    <div class="modal-dialog" [ngClass]="modalSize" [style.width]="(width ? (width + 'px'): null)">
+      <div class="modal-content">
+        <div class="modal-header" #modalHeader>
+          <ng-content select="[slot=modal-header]"></ng-content>
+          <ng-template [ngIf]="!hasCustomHeader">
+            <button type="button" class="close" (click)="hideModal()">
+            <span style="user-select: none;">&times;</span><span class="sr-only">Close</span>
+          </button>
+            <h4 class="modal-title">
+              {{header}}
+            </h4>
+          </ng-template>
+        </div>
+        <div class="modal-body">
+          <ng-content></ng-content>
+        </div>
+        <div class="modal-footer" #modalFooter>
+          <ng-content select="[slot=modal-footer]"></ng-content>
+          <ng-template [ngIf]="!hasCustomFooter">
+            <button type="button" class="btn btn-default btn-sm" (click)="onCancelClick()">{{cancelText}}</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="onOkClick()">{{okText}}</button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

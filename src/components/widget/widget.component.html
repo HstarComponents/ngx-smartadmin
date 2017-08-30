@@ -1,0 +1,44 @@
+<div class="sa-widget" [ngClass]="{'jarviswidget-fullscreen-mode': fullScreenMode}">
+  <div class="jarviswidget jarviswidget-collapsed" [ngClass]="widgetColorClass">
+    <header>
+      <div class="jarviswidget-ctrls" role="menu">
+        <a href="javascript:;" class="button-icon jarviswidget-toggle-btn" *ngIf="showCollapseBtn" (click)="toggleCollapse()">
+          <i class="fa" [ngClass]="{'fa-plus': widgetCollapsed, 'fa-minus': !widgetCollapsed}"></i>
+        </a>
+        <a href="javascript:;" class="button-icon jarviswidget-fullscreen-btn" *ngIf="showFullscreenBtn" (click)="toggleFullScreen()">
+          <i class="fa" [ngClass]="{'fa-compress': fullScreenMode, 'fa-expand': !fullScreenMode}"></i>
+        </a>
+      </div>
+      <div class="widget-toolbar" #toolbar [hidden]="!hasCustomToolbar">
+        <ng-content select="[slot=toolbar]"></ng-content>
+      </div>
+      <div class="widget-toolbar" *ngIf="showPickColorBtn">
+        <a data-toggle="dropdown" class="dropdown-toggle color-box selector" href="javascript:;"></a>
+        <ul class="dropdown-menu arrow-box-up-right color-select pull-right">
+          <li *ngFor="let color of allowColors" (click)="changeWidgetColor(color)">
+            <span class="bg-color-{{color}}"></span>
+          </li>
+          <li (click)="changeWidgetColor('')">
+            <a href="javascript:;" class="jarviswidget-remove-colors">Remove</a>
+          </li>
+        </ul>
+      </div>
+      <span class="widget-icon" [hidden]="!icon"><i [ngClass]="icon"></i></span>
+      <h2 #customHeader>
+        <ng-content select="[slot=header]">
+        </ng-content>
+        <ng-template [ngIf]="!hasCustomHeader">
+          {{header}}
+        </ng-template>
+      </h2>
+      <span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+    </header>
+    <div class="sa-widget-content" [hidden]="widgetCollapsed">
+      <div class="jarviswidget-editbox">
+      </div>
+      <div class="widget-body no-padding">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
