@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './pages';
+import {
+  HomeComponent,
+  AccordionDemoComponent
+} from './pages';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'accordion', component: AccordionDemoComponent }
 ];
 
 @NgModule({

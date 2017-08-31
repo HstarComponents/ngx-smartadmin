@@ -1,94 +1,27 @@
 <div class="app">
   <header id="header">
     <div id="logo-group">
-
-      <!-- PLACE YOUR LOGO HERE -->
       <span id="logo"> <img src="http://192.241.236.31/themes/preview/smartadmin/1.8.x/ajax/img/logo.png" alt="SmartAdmin"> </span>
-      <!-- END LOGO PLACEHOLDER -->
-
-      <!-- Note: The activity badge color changes when clicked and resets the number to 0
-					 Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-      <span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> </span>
     </div>
-    <!-- #TOGGLE LAYOUT BUTTONS -->
-    <!-- pulled right: nav area -->
     <div class="pull-right">
-      <!-- collapse menu button -->
-      <div id="hide-menu" class="btn-header pull-right">
-        <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
-      </div>
-      <!-- end collapse menu -->
-
-      <!-- logout button -->
       <div id="logout" class="btn-header transparent pull-right">
         <span> <a href="javascript:;" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></a> </span>
       </div>
-      <!-- end logout button -->
-
-      <!-- search mobile button (this is hidden till mobile view port) -->
-      <div id="search-mobile" class="btn-header transparent pull-right">
-        <span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
-      </div>
-      <!-- end search mobile button -->
-
-      <!-- #SEARCH -->
-      <!-- input: search field -->
-      <form action="#ajax/search.html" class="header-search pull-right">
-        <input id="search-fld" type="text" name="param" placeholder="Find reports and more">
-        <button type="submit">
-						<i class="fa fa-search"></i>
-					</button>
-        <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
-      </form>
-      <!-- end input: search field -->
-
-      <!-- fullscreen button -->
       <div id="fullscreen" class="btn-header transparent pull-right">
         <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
       </div>
-      <!-- end fullscreen button -->
-
-      <!-- #Voice Command: Start Speech -->
-      <!-- NOTE: Voice command button will only show in browsers that support it. Currently it is hidden under mobile browsers. 
-						   You can take off the "hidden-sm" and "hidden-xs" class to display inside mobile browser-->
-      <div id="speech-btn" class="btn-header transparent pull-right hidden-sm hidden-xs">
-        <div>
-          <a href="javascript:void(0)" title="Voice Command" data-action="voiceCommand"><i class="fa fa-microphone"></i></a>
-          <div class="popover bottom">
-            <div class="arrow"></div>
-            <div class="popover-content">
-              <h4 class="vc-title">Voice command activated <br><small>Please speak clearly into the mic</small></h4>
-              <h4 class="vc-title-error text-center">
-                <i class="fa fa-microphone-slash"></i> Voice command failed
-                <br><small class="txt-color-red">Must <strong>"Allow"</strong> Microphone</small>
-                <br><small class="txt-color-red">Must have <strong>Internet Connection</strong></small>
-              </h4>
-              <a href="javascript:void(0);" class="btn btn-success" onclick="commands.help()">See Commands</a>
-              <a href="javascript:void(0);" class="btn bg-color-purple txt-color-white" onclick="$('#speech-btn .popover').fadeOut(50);">Close Popup</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end voice command -->
-
     </div>
-    <!-- end pulled right: nav area -->
-
   </header>
   <aside id="left-panel">
-    <!-- NAVIGATION : This navigation is also responsive
-
-			To make this navigation dynamic please make sure to link the node
-			(the reference to the nav > ul) after page load. Or the navigation
-			will not initialize.
-			-->
+    <div class="login-info">
+      <span>
+      <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+        <img src="https://avatars3.githubusercontent.com/u/4043284" alt="me" class="online"> 
+        <span>Jay.M.Hu</span> <i class="fa fa-angle-down"></i>
+      </a>
+      </span>
+    </div>
     <nav>
-      <!-- 
-				NOTE: Notice the gaps after each icon usage <i></i>..
-				Please note that these links work a bit different than
-				traditional href="" links. See documentation for details.
-				-->
-
       <ul>
         <li *ngFor="let m1 of menuData" [class.active]="m1.active" [class.open]="m1.open" (click)="onMenuItemClick($event, m1)">
           <a href="#" [title]="m1.text">
@@ -123,8 +56,6 @@
         </li>
       </ul>
     </nav>
-    <a href="#ajax/difver.html" class="btn btn-primary nav-demo-btn"><i class="fa fa-info-circle"></i> SmartAdmin Package (187 MB)</a>
-    <span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>
   </aside>
   <div id="main" role="main">
     <!-- RIBBON -->
@@ -137,12 +68,8 @@
       </ol>
     </div>
     <!-- END RIBBON -->
-
-    <!-- #MAIN CONTENT -->
     <div id="content" style="opacity: 1;">
       <router-outlet></router-outlet>
     </div>
-
-    <!-- END #MAIN CONTENT -->
   </div>
 </div>

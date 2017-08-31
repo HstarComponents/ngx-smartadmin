@@ -1,14 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface MenuItem {
-  text: string,
-  url?: string,
-  icon?: string,
-  subMenu?: Array<MenuItem>,
-  active?: boolean,
-  open?: boolean,
-  parent?: MenuItem
-};
+import './app.component.styl';
 
 @Component({
   selector: 'app',
@@ -17,32 +8,11 @@ interface MenuItem {
 
 export class AppComponent implements OnInit {
 
-  public menuData: Array<MenuItem> = [
-    {
-      text: 'Tables', active: true, open: true, icon: 'fa-table', subMenu: [
-        { text: 'Normal Tables', active: true, url: '/table' },
-        { text: 'Data Tables', url: '/datatables' }
-      ]
-    },
-    {
-      text: 'Forms', icon: 'fa-pencil-square-o', subMenu: [
-        { text: 'Smart Form Elements', url: '/form-elements' },
-        { text: 'Smart Form Layouts', url: '/form-templates' },
-      ]
-    },
-    {
-      text: 'UI Elements', icon: 'fa-desktop', subMenu: [
-        { text: 'General Elements', url: '/general-elements' },
-        { text: 'Buttons', url: '/buttons' },
-        { text: 'Tree View', url: '/treeview' }
-      ]
-    },
-    {
-      text: 'Widgets', icon: 'fa-list-alt', url: '/widgets'
-    }
-  ];
+  public menuData: Array<MenuItem> = [];
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.menuData = AppConf.menuData;
+  }
 
   public onMenuItemClick(evt: MouseEvent, menu: MenuItem) {
     evt && evt.stopPropagation();
@@ -68,7 +38,7 @@ export class AppComponent implements OnInit {
 
   private setMenuTreeActived(menu: MenuItem) {
     menu.active = true;
-    if(menu.parent){
+    if (menu.parent) {
       this.setMenuTreeActived(menu.parent);
     }
   }

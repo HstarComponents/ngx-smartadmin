@@ -2,6 +2,7 @@ import './vendor';
 import { enableProdMode } from '@angular/core';
 import { platformBrowser } from '@angular/platform-browser';
 import { AppModuleNgFactory } from '../aot/examples/app.module.ngfactory';
+import './config';
 
 enableProdMode();
 console.log('Running AOT compiled');

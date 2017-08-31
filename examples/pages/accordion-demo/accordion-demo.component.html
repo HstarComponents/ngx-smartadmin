@@ -1,0 +1,17 @@
+<div class="page-accordion-demo">
+  <form #f1="ngForm">
+    Checked: {{checkboxValue}}
+    <sa-checkbox name="xx" [(ngModel)]="checkboxValue" value="mygod" [disabled]="checkboxDisabled" (change)="checkboxValueChanged($event)">XXX</sa-checkbox>
+    <button (click)="toggleCheckboxValue()">Toggle Value</button>
+    <button (click)="toggleCheckboxStatus()">Toggle Status</button>
+    <button (click)="resetForm()">Reset Form</button>
+  </form>
+
+  <sa-checkbox-group>
+    <div>
+      <sa-checkbox>
+        <b class="fa fa-user"></b> 哈哈哈
+      </sa-checkbox>
+    </div>
+  </sa-checkbox-group>
+</div>
