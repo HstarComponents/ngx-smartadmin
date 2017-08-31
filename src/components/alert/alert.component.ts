@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
+import './alert.component.styl';
 
 @Component({
   selector: 'sa-alert',
@@ -10,37 +11,40 @@ export class AlertComponent implements OnInit, OnChanges {
   private innerClass: string;
 
   @Input()
-  private shown: boolean = true;
-
-  @Output()
-  private shownChange: EventEmitter<boolean> = new EventEmitter();
+  public type: string = 'info';
 
   @Input()
-  private showCloseBtn: boolean = true;
+  public alertClass: string = '';
 
   @Input()
-  private type: string = 'info';
+  public shown: boolean = true;
 
   @Output()
-  private onClose: EventEmitter<any> = new EventEmitter();
+  public shownChange: EventEmitter<boolean> = new EventEmitter();
+
+  @Input()
+  private closable: boolean = true;
+
+  @Output()
+  private close: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
     this.setInnerClass();
   }
 
-  ngOnChanges(changesObj: SimpleChanges) {
-    if (changesObj.type) {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.type || changes.alertClass) {
       this.setInnerClass();
     }
   }
 
-  public btnCloseClick() {
+  public onCloseBtnClick() {
     this.shown = false;
     this.shownChange.emit(false);
-    this.onClose.emit();
+    this.close.emit(false);
   }
 
   private setInnerClass() {
-    this.innerClass = `alert-${this.type}`;
+    this.innerClass = `alert-${this.type} ${this.alertClass}`;
   }
 }

@@ -5,11 +5,13 @@ import {
   HomeComponent,
   NotfoundComponent,
   DemoContainerComponent,
-  AccordionDemoComponent
+  AccordionDemoComponent,
+  AlertDemoComponent
 } from './pages';
 
 const demoRoutes: Routes = [
   { path: 'accordion', component: AccordionDemoComponent },
+  { path: 'alert', component: AlertDemoComponent }
 ];
 
 const routes: Routes = [

@@ -1,5 +1,5 @@
-<div class="sa-alert alert fade in" [ngClass]="innerClass"  [hidden]="!shown">
-  <button class="close" *ngIf="showCloseBtn" (click)="btnCloseClick()">×</button>
+<div class="sa-alert alert fade in" [ngClass]="innerClass" [hidden]="!shown">
+  <button class="close" *ngIf="closable" (click)="onCloseBtnClick()">×</button>
   <h4 class="alert-heading">
     <ng-content select="[slot=alert-heading]"></ng-content>
   </h4>

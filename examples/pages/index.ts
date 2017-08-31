@@ -4,6 +4,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DemoContainerComponent } from './demo-container/demo-container.component';
 
 import { AccordionDemoComponent } from './accordion-demo/accordion-demo.component';
+import { AlertDemoComponent } from './alert-demo/alert-demo.component';
 
 export {
   AppComponent,
@@ -11,7 +12,8 @@ export {
   NotfoundComponent,
   DemoContainerComponent,
 
-  AccordionDemoComponent
+  AccordionDemoComponent,
+  AlertDemoComponent
 };
 
 export const ALL_PAGES = [
@@ -20,5 +22,6 @@ export const ALL_PAGES = [
   NotfoundComponent,
   DemoContainerComponent,
 
-  AccordionDemoComponent
+  AccordionDemoComponent,
+  AlertDemoComponent
 ];

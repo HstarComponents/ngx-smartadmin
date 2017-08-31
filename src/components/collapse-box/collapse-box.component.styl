@@ -1,0 +1,29 @@
+.sa-collapse-box {
+  margin-bottom: 10px;
+
+  .collapse-box-header {
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+
+    b {
+      cursor: pointer;
+    }
+
+    span {
+      flex: 1;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        right: 0;
+        left: 5px;
+        height: 1px;
+        background: linear-gradient(to right, #ccc, #666, #ccc);
+      }
+    }
+  }
+}

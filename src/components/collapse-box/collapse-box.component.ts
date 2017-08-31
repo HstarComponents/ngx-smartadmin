@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import './collapse-box.component.styl';
 
 @Component({
   selector: 'sa-collapse-box',

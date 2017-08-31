@@ -1,0 +1,37 @@
+<div class="page-alert-demo">
+  <sa-collapse-box header="多种不同的类型">
+    <div class="padding-10">
+      <sa-alert (close)="onClose()">
+        <i class="fa-fw fa fa-info"></i>
+        <strong>Info</strong> You have 198 unread messages.
+      </sa-alert>
+      <sa-alert type="success" (close)="onClose()">
+        <i class="fa-fw fa fa-check"></i>
+        <strong>Success</strong> The page has been added.
+      </sa-alert>
+      <sa-alert type="warning" (close)="onClose()">
+        <i class="fa-fw fa fa-warning"></i>
+        <strong>Warning</strong> Your monthly traffic is reaching limit.
+      </sa-alert>
+      <sa-alert type="danger" (close)="onClose()">
+        <i class="fa-fw fa fa-times"></i>
+        <strong>Danger!</strong> The daily cronjob has failed.
+      </sa-alert>
+    </div>
+  </sa-collapse-box>
+  <sa-collapse-box header="禁止被关闭">
+    <div class="padding-10">
+      <sa-alert [closable]="false">
+        我不能被关闭
+      </sa-alert>
+    </div>
+  </sa-collapse-box>
+  <sa-collapse-box header="允许动态显示隐藏">
+    <div class="padding-10">
+      <input type="checkbox" name="shown" [(ngModel)]="shown">
+      <sa-alert [(shown)]="shown" type="success">
+        我可以动态的被显示隐藏！
+      </sa-alert>
+    </div>
+  </sa-collapse-box>
+</div>

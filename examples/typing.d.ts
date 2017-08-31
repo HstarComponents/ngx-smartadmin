@@ -9,5 +9,6 @@ interface MenuItem {
 }
 
 declare var AppConf: {
-  menuData: Array<MenuItem>
+  menuData: Array<MenuItem>,
+  rootHost: string
 }

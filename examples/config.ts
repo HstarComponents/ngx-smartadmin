@@ -28,5 +28,6 @@ export const menuData: Array<MenuItem> = [
 ];
 
 window['AppConf'] = {
-  menuData
+  menuData,
+  rootHost: 'http://localhost:7777'
 };
