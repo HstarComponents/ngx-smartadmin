@@ -24,8 +24,8 @@ export class AppModule {
 
 ## UI Elements
 
-- [ ] Accordion [Usage](src/components/accordion/README.md)
-- [ ] Alert [Usage](src/components/alert/README.md)
+- [x] Accordion [Usage](src/components/accordion/README.md)
+- [x] Alert [Usage](src/components/alert/README.md)
 - [ ] CollapseBox [Usage](src/components/collapse-box/README.md)
 - [ ] Modal [Usage](src/components/modal/README.md)
 - [ ] Pagination [Usage](src/components/pagination/README.md)

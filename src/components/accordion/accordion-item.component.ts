@@ -10,10 +10,10 @@ export class AccordionItemComponent implements OnInit, AfterViewInit {
   private accordionItemId: string = `accordion_item_${Math.random().toString(16).slice(2)}`;
 
   @Input()
-  private header: string;
+  public header: string;
 
   @Input()
-  private active: boolean;
+  public active: boolean;
 
   constructor(public accordion: AccordionComponent) {
   }
@@ -26,7 +26,7 @@ export class AccordionItemComponent implements OnInit, AfterViewInit {
 
   }
 
-  public changeActiveStatus(){
+  public changeActiveStatus() {
     this.active = !this.active;
   }
 }
