@@ -29,5 +29,5 @@ export const menuData: Array<MenuItem> = [
 
 window['AppConf'] = {
   menuData,
-  rootHost: 'http://localhost:7777'
+  rootHost: process.env.NODE_ENV === 'production' ? 'https://github.com/HstarComponents/ngx-smartadmin/tree/master' : 'http://localhost:7777'
 };

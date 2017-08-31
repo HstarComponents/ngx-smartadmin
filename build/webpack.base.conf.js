@@ -22,6 +22,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CheckerPlugin()
+    new CheckerPlugin(),
+    new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: true })
   ]
 };

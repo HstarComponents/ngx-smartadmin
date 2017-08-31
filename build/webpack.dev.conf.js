@@ -16,8 +16,7 @@ module.exports = webpackMerge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: util.root('examples/index.html')
-    }),
-    new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: true })
+    })
   ],
   devServer: {
     port: 7777,
