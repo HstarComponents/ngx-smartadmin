@@ -4,18 +4,15 @@
       <span id="logo"> <img src="http://192.241.236.31/themes/preview/smartadmin/1.8.x/ajax/img/logo.png" alt="SmartAdmin"> </span>
     </div>
     <div class="pull-right">
-      <div id="logout" class="btn-header transparent pull-right">
-        <span> <a href="javascript:;" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></a> </span>
-      </div>
       <div id="fullscreen" class="btn-header transparent pull-right">
-        <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
+        <span> <a href="javascript:void(0);" (click)="launchFullscreen()" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
       </div>
     </div>
   </header>
   <aside id="left-panel">
     <div class="login-info">
       <span>
-      <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+      <a href="javascript:void(0);" id="show-shortcut">
         <img src="https://avatars3.githubusercontent.com/u/4043284" alt="me" class="online"> 
         <span>Jay.M.Hu</span> <i class="fa fa-angle-down"></i>
       </a>
@@ -64,7 +61,7 @@
 					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true" data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?"><i class="fa fa-refresh"></i></span>
       </span>
       <ol class="breadcrumb">
-        <li>Home</li>
+        <li> <a href="javascript:;" (click)="navigateTo('/')">Home</a></li>
       </ol>
     </div>
     <!-- END RIBBON -->

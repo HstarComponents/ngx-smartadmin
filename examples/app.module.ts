@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { SmartAdminModule } from '../src';
 
+import { COMPONENTS } from './components';
 import { AppComponent, ALL_PAGES } from './pages';
 import { AppRoutingModule } from './app.routing'; //TODO: Create app.routing
 
@@ -15,7 +16,7 @@ import { AppRoutingModule } from './app.routing'; //TODO: Create app.routing
     SmartAdminModule,
     AppRoutingModule,
   ],
-  declarations: [...ALL_PAGES],
+  declarations: [...COMPONENTS, ...ALL_PAGES],
   providers: [/* TODO: Providers go here */],
   bootstrap: [AppComponent],
 })
