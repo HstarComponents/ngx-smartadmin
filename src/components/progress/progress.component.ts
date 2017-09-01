@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import './progress.component.styl';
 
 @Component({
   selector: 'sa-progress',

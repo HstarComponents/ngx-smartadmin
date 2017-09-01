@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import './progress-demo.component.styl';
 
 @Component({
   selector: 'progress-demo',
