@@ -1,5 +1,14 @@
+.sa-accordion .sa-accordion-item {
+  margin-top: -1px;
+}
+.sa-accordion sa-accordion-item:first-child .sa-accordion-item {
+  margin-top: 0;
+}
 .sa-alert {
   margin-bottom: 0;
+}
+.widget-body.no-padding .sa-alert {
+  border-width: 0 0 0 5px !important;
 }
 .sa-collapse-box {
   margin-bottom: 10px;
@@ -25,6 +34,17 @@
   left: 5px;
   height: 1px;
   background: linear-gradient(to right, #ccc, #666, #ccc);
+}
+.sa-modal.sa-modal-drag .modal-dialog {
+  position: absolute;
+  top: 30px;
+  margin: 0;
+}
+.sa-modal.sa-modal-drag .modal-header {
+  cursor: move;
+}
+.sa-progress {
+  margin-bottom: 0;
 }
 .fixed-navigation nav {
   padding-bottom: 20px;
@@ -424,6 +444,9 @@
   background: #fff;
 }
 .page-alert-demo .sa-alert {
+  margin-bottom: 20px;
+}
+.page-progress-demo .sa-progress {
   margin-bottom: 20px;
 }
 
