@@ -1,3 +1,29 @@
 <div class="page-modal-demo">
-  
+  <button class="btn btn-primary" (click)="showModal('modalShown')">Show Modal</button>
+  <button class="btn btn-primary" (click)="showModal('modal2Shown')">Show Large Modal</button>
+  <button class="btn btn-primary" (click)="showModal('modal3Shown')">Show width=200 Modal</button>
+  <button class="btn btn-primary" (click)="showModal('modal4Shown')">Show custom okText Modal</button>
+  <button class="btn btn-primary" (click)="showModal('modal5Shown')">Show Draggable Modal</button>
+  <button class="btn btn-primary" (click)="showModal('modal6Shown')">Show Custom Footer Modal</button>
+
+  <sa-modal [(shown)]="modalShown" header="我是弹出层">
+    一个简单的弹出层
+  </sa-modal>
+  <sa-modal [(shown)]="modal2Shown" size="lg" header="Size=lg">
+    大号的弹出层
+  </sa-modal>
+  <sa-modal [(shown)]="modal3Shown" size="lg" header="Width=200" [width]="200">
+    设定宽度=200的弹出层
+  </sa-modal>
+  <sa-modal [(shown)]="modal4Shown" header="Custom okText" okText="OK TEXT">
+    自定义OkText
+  </sa-modal>
+  <sa-modal [(shown)]="modal5Shown" header="点我拖拽" okText="OK Button" [draggable]="true" (ok)="onOkBtnClick()">
+    一个可以被拖拽的弹出层，点击<b>OK Button</b>有惊喜哦！
+  </sa-modal>
+  <sa-modal [(shown)]="modal6Shown" header="自定义Footer" okText="OK TEXT">
+    <div slot="modal-footer">
+      <button class="btn btn-danger" (click)="onOkBtnClick()">自定义Footer按钮</button>
+    </div>
+  </sa-modal>
 </div>

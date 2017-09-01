@@ -62,7 +62,6 @@ export class AppComponent implements OnInit {
     let url = this.router.url;
     this._setMenuStatus(this.currentSelectMenu, false, false);
     let menu = this._getMenuByUrl(this.menuData, url);
-    console.log('select', menu);
     if (menu) {
       this.currentSelectMenu = menu;
       this._setMenuStatus(menu, true, false);
@@ -75,7 +74,6 @@ export class AppComponent implements OnInit {
     }
     menu.active = active;
     menu.open = open;
-    console.log(menu);
     if (menu.parent) {
       this._setMenuStatus(menu.parent, active, true);
     }

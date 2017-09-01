@@ -2,6 +2,7 @@ import {
   Component, OnInit, Input, Output, ElementRef, OnChanges, AfterViewInit, OnDestroy,
   EventEmitter, ViewChild, SimpleChanges
 } from '@angular/core';
+import './modal.component.styl';
 
 const defaults = {
   backdrop: 'static',
@@ -32,6 +33,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
 
   private onHeaderMouseDown = (evt: MouseEvent) => {
     let styleObj = window.getComputedStyle(this.modalDialog);
+    document.body.style.userSelect = 'none';
     this.dragObj = {
       isDragging: true,
       pageX: evt.pageX,
@@ -44,6 +46,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
     if (this.dragObj.isDragging) {
       if (evt.buttons !== 1) {
         this.dragObj.isDragging = false;
+        document.body.style.userSelect = 'unset';
         return;
       }
       let nextLeft = this.dragObj.elLeft + evt.pageX - this.dragObj.pageX;
@@ -57,6 +60,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
     }
   };
   private onDocumentMouseUp = (evt: MouseEvent) => {
+    document.body.style.userSelect = 'unset';
     this.dragObj.isDragging = false;
   };
 
@@ -132,7 +136,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   ngOnChanges(changesObj: SimpleChanges) {
-    if (changesObj.allowDrag) {
+    if (changesObj.draggable) {
       this.initDrag();
     }
   }
@@ -170,7 +174,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
       return;
     }
     let header = this.elementRef.nativeElement.querySelector('.modal-header');
-    if (this.allowDrag) { // 初始化Drag
+    if (this.draggable) { // 初始化Drag
       header.addEventListener('mousedown', this.onHeaderMouseDown, false);
       document.addEventListener('mousemove', this.onDocumentMouseMove, false);
       document.addEventListener('mouseup', this.onDocumentMouseUp, false);
@@ -179,7 +183,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   showModal() {
-    if (this.allowDrag) {
+    if (this.draggable) {
       this.initModalPosition();
     }
     let opt = Object.assign({}, defaults, this.options);
