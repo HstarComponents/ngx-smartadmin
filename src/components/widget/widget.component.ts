@@ -15,35 +15,35 @@ export class WidgetComponent implements OnInit {
     'yellow', 'orange', 'orangeDark',
     'red', 'redLight', 'white'
   ];
-  private widgetColorClass: string = '';
-  private fullScreenMode: boolean = false;
-  private widgetCollapsed: boolean = false;
-  private hasCustomHeader: boolean = false;
-  private hasCustomToolbar: boolean = false;
+  public widgetColorClass: string = '';
+  public fullScreenMode: boolean = false;
+  public widgetCollapsed: boolean = false;
+  public hasCustomHeader: boolean = false;
+  public hasCustomToolbar: boolean = false;
 
   @Input()
-  private header: string;
+  public header: string;
 
   @Input()
-  private icon: string;
+  public icon: string;
 
   @Input()
-  private showCollapseBtn: boolean = true;
+  public showCollapseBtn: boolean = true;
 
   @Input()
-  private showFullscreenBtn: boolean = false;
+  public showFullscreenBtn: boolean = false;
 
   @Input()
-  private showPickColorBtn: boolean = false;
+  public showPickColorBtn: boolean = false;
 
   @Input()
-  private defaultColor: string = '';
+  public defaultColor: string = '';
 
   @ViewChild('customHeader')
-  private customHeader: any;
+  public customHeader: any;
 
   @ViewChild('toolbar')
-  private customToolbar: any;
+  public customToolbar: any;
 
   constructor(private elementRef: ElementRef) {
 

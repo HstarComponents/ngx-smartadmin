@@ -8,7 +8,7 @@ import './alert.component.styl';
 
 export class AlertComponent implements OnInit, OnChanges {
 
-  private innerClass: string;
+  public innerClass: string;
 
   @Input()
   public type: string = 'info';
@@ -23,10 +23,10 @@ export class AlertComponent implements OnInit, OnChanges {
   public shownChange: EventEmitter<boolean> = new EventEmitter();
 
   @Input()
-  private closable: boolean = true;
+  public closable: boolean = true;
 
   @Output()
-  private close: EventEmitter<any> = new EventEmitter();
+  public close: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
     this.setInnerClass();

@@ -20,8 +20,8 @@ export class ModalComponent implements OnInit, AfterViewInit {
   private $el: any;
   private modalDialog: any;
   private isShown: boolean = false;
-  private hasCustomHeader: boolean = false;
-  private hasCustomFooter: boolean = false;
+  public hasCustomHeader: boolean = false;
+  public hasCustomFooter: boolean = false;
   private dragInit = false;
   private dragObj = {
     isDragging: false,
@@ -69,43 +69,43 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   @Input()
-  private size: string;
+  public size: string;
 
   @Input()
-  private width: number;
+  public width: number;
 
   @Input()
-  private header: string;
+  public header: string;
 
   @Input()
-  private animate: string = 'fade';
+  public animate: string = 'fade';
 
   @Input()
-  private okText: string = 'Save changes';
+  public okText: string = 'Save changes';
 
   @Input()
-  private cancelText: string = 'Close';
+  public cancelText: string = 'Close';
 
   @Input()
-  private draggable: boolean = false;
+  public draggable: boolean = false;
 
   @Input()
-  private options: { backdrop?: boolean | string, show?: boolean, keyboard?: boolean };
+  public options: { backdrop?: boolean | string, show?: boolean, keyboard?: boolean };
 
   @Output()
-  private onShown: EventEmitter<any> = new EventEmitter();
+  public onShown: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  private onHidden: EventEmitter<any> = new EventEmitter();
+  public onHidden: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  private cancel: EventEmitter<any> = new EventEmitter();
+  public cancel: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  private ok: EventEmitter<any> = new EventEmitter();
+  public ok: EventEmitter<any> = new EventEmitter();
 
   @Input()
-  private set shown(val: boolean) {
+  public set shown(val: boolean) {
     this.isShown = val;
     this.shownChange.emit(this.isShown);
     if (!this.$modal) {
@@ -115,13 +115,13 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   @Output()
-  private shownChange = new EventEmitter();
+  public shownChange = new EventEmitter();
 
   @ViewChild('modalHeader')
-  private modalHeader: any;
+  public modalHeader: any;
 
   @ViewChild('modalFooter')
-  private modalFooter: any;
+  public modalFooter: any;
 
   constructor(
     private elementRef: ElementRef

@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ModalDemoComponent implements OnInit {
 
   public modalShown: boolean = false;
+  public modal2Shown: boolean = false;
+  public modal3Shown: boolean = false;
+  public modal4Shown: boolean = false;
+  public modal5Shown: boolean = false;
+  public modal6Shown: boolean = false;
 
   ngOnInit() { }
 

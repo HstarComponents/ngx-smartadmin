@@ -19,28 +19,28 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
 
   private onChange: any = Function.prototype;
   private onTouched: any = Function.prototype;
-  private paginationClass: string = '';
-  private pageIndex: number = 1;
+  public paginationClass: string = '';
+  public pageIndex: number = 1;
   private _pageSize: number = 10;
-  private pageCount: number = 1;
-  private pages: Array<any> = [];
+  public pageCount: number = 1;
+  public pages: Array<any> = [];
 
   @Input()
-  private size: string = '';
+  public size: string = '';
 
   @Input()
-  private alt: boolean = false;
+  public alt: boolean = false;
 
   @Input()
-  private totalCount: number = 0;
+  public totalCount: number = 0;
 
   @Input()
-  private set pageSize(val: number) {
+  public set pageSize(val: number) {
     this._pageSize = Math.floor(Math.max(1, val));
   }
 
   @Output()
-  private pageChanged: EventEmitter<number> = new EventEmitter();
+  public pageChanged: EventEmitter<number> = new EventEmitter();
 
   ngOnInit() {
   }
