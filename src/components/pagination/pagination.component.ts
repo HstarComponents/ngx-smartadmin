@@ -45,11 +45,11 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
   ngOnInit() {
   }
 
-  ngOnChanges(changesObj: SimpleChanges) {
-    if (changesObj.size || changesObj.alt) {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.size || changes.alt) {
       this.setPaginationClass();
     }
-    if (changesObj.totalCount || changesObj.pageSize) {
+    if (changes.totalCount || changes.pageSize) {
       this.calcPageInfo();
     }
   }
@@ -65,6 +65,7 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
   public writeValue(value: any): void {
     this.pageIndex = Math.max(1, +value);
     this.buildPages();
+    this.pageChanged.next(this.pageIndex);
   }
 
   public registerOnChange(fn: (_: any) => {}): void {

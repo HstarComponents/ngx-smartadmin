@@ -1,1 +1,28 @@
-<div class="pagination-demo"> Hello PaginationDemoComponent! </div>
+<div class="page-pagination-demo">
+  <form class="smart-form">
+    <div class="row">
+      <div class="section">
+        <div class=" col col-6">
+          <label for="">总记录数</label>
+          <label class="input">
+            <input type="number" class="form-control" name="totalCount" [(ngModel)]="pageObj.totalCount">
+          </label>
+        </div>
+        <div class="col col-6">
+          <label for="">每页记录数</label>
+          <label class="input">
+            <input type="number" class="form-control" name="pageSize" [(ngModel)]="pageObj.pageSize">
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+  <hr>
+  <sa-pagination [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex" (pageChanged)="onPageChanged($event)"></sa-pagination>
+  <br>
+  <sa-pagination size="lg" [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex"></sa-pagination>
+  <br>
+  <sa-pagination size="sm" [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex"></sa-pagination>
+  <br>
+  <sa-pagination [alt]="true" [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex"></sa-pagination>
+</div>
