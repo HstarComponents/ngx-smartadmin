@@ -6,59 +6,69 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class ProgressComponent implements OnInit, OnChanges {
 
-  private barClass: string;
-  private barWidth: string;
+  public barClass: string;
+  public barWidth: string;
+  public barHeight: string;
 
   @Input()
-  private align: string = ''; // 可选['', 'right', 'bottom']
+  public align: string = ''; // 可选['', 'right', 'bottom']
 
   @Input()
-  private vertical: boolean = false; // 是否垂直
+  public vertical: boolean = false; // 是否垂直
 
   @Input()
-  private striped: boolean = false; // 条纹
+  public striped: boolean = false; // 条纹
 
   @Input()
-  private active: boolean = false; // 激活的
+  public active: boolean = false; // 激活的
 
   @Input()
-  private size: string = ''; // 尺寸，可选['micro', 'xs', 'sm', '', 'lg']
+  public size: string = ''; // 尺寸，可选['micro', 'xs', 'sm', '', 'lg']
 
   @Input()
-  private maxValue: number = 100; // 最大值
+  public maxValue: number = 100; // 最大值
 
   @Input()
-  private type: string = ''; // 类型，可选['danger', 'warning', 'success', 'info', 'primary']
+  public type: string = ''; // 类型，可选['danger', 'warning', 'success', 'info', 'primary']
 
   @Input()
-  private class: string = ''; // 自定义class
+  public class: string = ''; // 自定义class
 
   @Input()
-  private value: number; // 给定的value
+  public value: number; // 给定的value
 
   @Input()
-  private bgColorClass: string = ''; // 背景色
+  public wideBar: boolean = false; // 是否是较宽样式
+
+  @Input()
+  public bgColorClass: string = ''; // 背景色
 
   ngOnInit() {
 
   }
 
-  ngOnChanges(changesObj: SimpleChanges) {
-    if (changesObj.value || changesObj.maxValue) {
-      this.calcBarWidth();
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.value || changes.maxValue) {
+      this.calcBarWidthOrHeight();
     }
     this.calcBarClass();
   }
 
-  private calcBarWidth(): void {
+  private calcBarWidthOrHeight(): void {
     let per = this.value / this.maxValue * 100;
     if (per !== per) { // Is NaN
-      return this.barWidth = null;
+      this.barWidth = null;
+      this.barHeight = null;
+      return;
     }
     if (per > 100) {
       per = 100;
     }
-    this.barWidth = `${per}%`;
+    if (this.vertical) {
+      this.barHeight = `${per}%`;
+    } else {
+      this.barWidth = `${per}%`;
+    }
   }
 
   private calcBarClass() {
@@ -83,6 +93,9 @@ export class ProgressComponent implements OnInit, OnChanges {
     }
     if (this.class) {
       classArr.push(this.class);
+    }
+    if (this.wideBar) {
+      classArr.push('wide-bar');
     }
     this.barClass = classArr.join(' ');
   }

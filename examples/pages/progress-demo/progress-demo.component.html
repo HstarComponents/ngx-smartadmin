@@ -1,1 +1,57 @@
-<div class="progress-demo"> Hello ProgressDemoComponent! </div>
+<div class="page-progress-demo">
+  <div class="row">
+    <div class="col-xs-6">
+      <sa-progress bgColorClass="bg-color-teal" align="right" [value]="value25">25%</sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="right" [value]="value50">50%</sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="right" [value]="value75">75%</sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" align="right" [value]="value100">100%</sa-progress>
+    </div>
+    <div class="col-xs-6">
+      <sa-progress bgColorClass="bg-color-teal" [value]="value25"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [value]="value50"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" [value]="value100"></sa-progress>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <sa-progress bgColorClass="bg-color-teal" [vertical]="true" [value]="value25"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [vertical]="true" [value]="value50"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [vertical]="true" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" [vertical]="true" [value]="value100"></sa-progress>
+    </div>
+    <div class="col-xs-3">
+      <sa-progress bgColorClass="bg-color-teal" align="bottom" [vertical]="true" [value]="value25"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="bottom" [vertical]="true" [value]="value50"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="bottom" [vertical]="true" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" align="bottom" [vertical]="true" [value]="value100"></sa-progress>
+    </div>
+    <div class="col-xs-3">
+      <sa-progress bgColorClass="bg-color-teal" [vertical]="true" [wideBar]="true" [value]="value25"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [vertical]="true" [wideBar]="true" [value]="value50"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" [vertical]="true" [wideBar]="true" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" [vertical]="true" [wideBar]="true" [value]="value100"></sa-progress>
+    </div>
+    <div class="col-xs-3">
+      <sa-progress bgColorClass="bg-color-teal" align="bottom" [vertical]="true" [wideBar]="true" [value]="value25"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="bottom" [vertical]="true" [wideBar]="true" [value]="value50"></sa-progress>
+      <sa-progress bgColorClass="bg-color-blueLight" align="bottom" [vertical]="true" [wideBar]="true" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" align="bottom" [vertical]="true" [wideBar]="true" [value]="value100"></sa-progress>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <sa-progress size="micro" type="primary" [value]="value25"></sa-progress>
+      <sa-progress size="xs" bgColorClass="bg-color-blue" [value]="value50"></sa-progress>
+      <sa-progress size="sm" bgColorClass="bg-color-greenLight" [value]="value75"></sa-progress>
+      <sa-progress bgColorClass="bg-color-redLight" [value]="value75"></sa-progress>
+      <sa-progress size="lg" bgColorClass="bg-color-blueLight" [value]="80"></sa-progress>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <sa-progress size="lg" [striped]="true" [value]="value25"></sa-progress>
+      <sa-progress size="sm" bgColorClass="bg-color-darken" [active]="true" [striped]="true" [value]="value75"></sa-progress>
+    </div>
+  </div>
+</div>
