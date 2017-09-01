@@ -6,8 +6,10 @@ export const menuData: Array<MenuItem> = [
   },
   {
     text: 'Forms', icon: 'fa-pencil-square-o', subMenu: [
-      { text: 'Check Box (Group)', url: '/check-box' },
-      { text: 'Radio (Group)', url: '/radio' },
+      { text: 'Check Box', url: '/checkbox' },
+      { text: 'Check Box Group', url: '/checkbox-group' },
+      { text: 'Radio', url: '/radio' },
+      { text: 'Radio Group', url: '/radio-group' },
       { text: 'Rating', url: '/rating' },
       { text: 'Switch', url: '/switch' }
     ]
@@ -29,5 +31,5 @@ export const menuData: Array<MenuItem> = [
 
 window['AppConf'] = {
   menuData,
-  rootHost: process.env.NODE_ENV === 'production' ? 'https://github.com/HstarComponents/ngx-smartadmin/tree/master' : 'http://localhost:7777'
+  rootHost: process.env.NODE_ENV === 'production' ? 'https://raw.githubusercontent.com/HstarComponents/ngx-smartadmin/master' : 'http://localhost:7777'
 };
