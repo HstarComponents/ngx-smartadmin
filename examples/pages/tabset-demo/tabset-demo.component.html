@@ -1,1 +1,12 @@
-<div class="tabset-demo"> Hello TabsetDemoComponent! </div>
+<div class="page-tabset-demo">
+  当前选中项的名字：{{selected}}
+  <hr>
+  <sa-tabset [(selected)]="selected">
+    <sa-tab-item header="Tab1">
+      我是第一个Tab的内容
+    </sa-tab-item>
+    <sa-tab-item header="Tab2">
+      我的第二个Tab的内容
+    </sa-tab-item>
+  </sa-tabset>
+</div>
