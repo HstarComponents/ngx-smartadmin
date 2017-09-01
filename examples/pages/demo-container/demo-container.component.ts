@@ -24,6 +24,9 @@ export class DemoContainerComponent implements OnInit {
 
   private _loadComponentDocument() {
     let componentName = this.router.url.split('/').pop();
+    if (!componentName) {
+      return;
+    }
     this.http.get(`${AppConf.rootHost}/src/components/${componentName}/README.md`)
       .subscribe(res => {
         this.componentDocument = res.text();

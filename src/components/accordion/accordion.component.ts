@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, ElementRef, AfterViewInit, OnChanges, EventEmitter } from '@angular/core';
+import './accordion.component.styl';
 
 @Component({
   selector: 'sa-accordion',

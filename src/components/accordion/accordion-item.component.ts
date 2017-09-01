@@ -15,6 +15,9 @@ export class AccordionItemComponent implements OnInit, AfterViewInit {
   @Input()
   public active: boolean;
 
+  @Output()
+  public activeChange: EventEmitter<boolean> = new EventEmitter();
+
   constructor(public accordion: AccordionComponent) {
   }
 
@@ -28,5 +31,6 @@ export class AccordionItemComponent implements OnInit, AfterViewInit {
 
   public changeActiveStatus() {
     this.active = !this.active;
+    this.activeChange.emit(this.active);
   }
 }
