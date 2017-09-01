@@ -1,13 +1,16 @@
 <div class="page-demo-container">
-  <div class="demo-page-container">
-    <router-outlet></router-outlet>
-  </div>
-  <hr>
-  <div class="document-container">
-    <sa-widget header="组件文档" icon="fa fa-book">
-      <div class="padding-10">
+  <sa-widget header="组件Demo" icon="fa fa-file">
+    <div class="padding-10">
+      <div class="demo-page-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </sa-widget>
+  <sa-widget header="组件文档" icon="fa fa-book">
+    <div class="padding-10">
+      <div class="document-container">
         <markdown-box [markdown]="componentDocument"></markdown-box>
       </div>
-    </sa-widget>
-  </div>
+    </div>
+  </sa-widget>
 </div>

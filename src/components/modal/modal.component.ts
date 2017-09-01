@@ -29,6 +29,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
     elLeft: 0,
     elTop: 0
   };
+
   private onHeaderMouseDown = (evt: MouseEvent) => {
     let styleObj = window.getComputedStyle(this.modalDialog);
     this.dragObj = {
@@ -82,7 +83,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
   private cancelText: string = 'Close';
 
   @Input()
-  private allowDrag: boolean = false;
+  private draggable: boolean = false;
 
   @Input()
   private options: { backdrop?: boolean | string, show?: boolean, keyboard?: boolean };
@@ -94,10 +95,10 @@ export class ModalComponent implements OnInit, AfterViewInit {
   private onHidden: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  private onCancel: EventEmitter<any> = new EventEmitter();
+  private cancel: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  private onOk: EventEmitter<any> = new EventEmitter();
+  private ok: EventEmitter<any> = new EventEmitter();
 
   @Input()
   private set shown(val: boolean) {
@@ -190,12 +191,12 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   onCancelClick() {
-    this.onCancel.emit();
+    this.cancel.emit();
     this.hideModal();
   }
 
   onOkClick() {
-    this.onOk.emit();
+    this.ok.emit();
   }
 
   private initModalPosition() {
