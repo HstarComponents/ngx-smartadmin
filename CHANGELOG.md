@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.2.0 (2017.09.xx)
+
+- 新增多种表单控件
+
 ## v0.1.1 (2017.08.30)
 
 - 修复打包导致无法加载HTML模板的问题

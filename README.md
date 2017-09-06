@@ -26,22 +26,22 @@ export class AppModule {
 
 - [x] Accordion [Usage](src/components/accordion/README.md)
 - [x] Alert [Usage](src/components/alert/README.md)
-- [ ] CollapseBox [Usage](src/components/collapse-box/README.md)
-- [ ] Modal [Usage](src/components/modal/README.md)
-- [ ] Pagination [Usage](src/components/pagination/README.md)
-- [ ] Progress [Usage](src/components/progress/README.md)
-- [ ] TabSet [Usage](src/components/tabset/README.md)
-- [ ] Widget [Usage](src/components/widget/README.md)
-- [ ] Wizard [Usage](src/components/wizard/README.md)
+- [x] CollapseBox [Usage](src/components/collapse-box/README.md)
+- [x] Modal [Usage](src/components/modal/README.md)
+- [x] Pagination [Usage](src/components/pagination/README.md)
+- [x] Progress [Usage](src/components/progress/README.md)
+- [x] TabSet [Usage](src/components/tabset/README.md)
+- [x] Widget [Usage](src/components/widget/README.md)
+- [x] Wizard [Usage](src/components/wizard/README.md)
 
 ## Forms Elements
 
-- [ ] CheckBox [Usage](src/components/checkbox/README.md)
-- [ ] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
-- [ ] Radio [Usage](src/components/radio/README.md)
-- [ ] RadioGroup [Usage](src/components/radio-group/README.md)
+- [x] CheckBox [Usage](src/components/checkbox/README.md)
+- [x] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
+- [x] Radio [Usage](src/components/radio/README.md)
+- [x] RadioGroup [Usage](src/components/radio-group/README.md)
 - [ ] Rating [Usage](src/components/rating/README.md)
-- [ ] Switch [Usage](src/components/switch/README.md)
+- [x] Switch [Usage](src/components/switch/README.md)
 
 ## Tables
 
