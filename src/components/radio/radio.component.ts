@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, Optional } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { RadioGroupComponent } from '../radio-group/radio-group.component';
 
 export const RADIO_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -21,16 +22,16 @@ export class RadioComponent implements OnInit, OnChanges {
   public disabled: boolean = false;
 
   @Input()
-  public name: string = 'sa-radio';
+  public name: string = '';
 
-  private innerValue: boolean | any = true;
+  public innerValue: boolean | any = true;
 
   private checked: boolean = false;
 
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
 
-  constructor(private elementRef: ElementRef) {
+  constructor(private elementRef: ElementRef, @Optional() private radioGroup: RadioGroupComponent) {
   }
 
   ngOnInit() {
@@ -47,10 +48,17 @@ export class RadioComponent implements OnInit, OnChanges {
     let checked = (evt.target as HTMLInputElement).checked;
     this.checked = checked;
     this.onChange(this.innerValue);
+    // 如果有radio-group，则需要反向设置value
+    if (this.radioGroup) {
+      this.radioGroup.setRadioGroupValue(this.innerValue);
+    }
+  }
+
+  public setChecked(checked: boolean) {
+    this.checked = checked;
   }
 
   public writeValue(value: any): void {
-    console.log(this.innerValue, value);
     this.checked = this.innerValue === value;
   }
 

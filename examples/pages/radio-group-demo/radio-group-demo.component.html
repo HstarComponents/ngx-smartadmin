@@ -1,1 +1,35 @@
-<div class="radio-group-demo"> Hello RadioGroupDemoComponent! </div>
+<div class="page-radio-group-demo">
+  <div class="row">
+    <div class="col-xs-8">
+      <label>Radio Group，选中项：{{val}}</label>
+      <sa-radio-group [(ngModel)]="val" [disabled]="disabled">
+        <sa-radio value="a">A</sa-radio>
+        <sa-radio value="b">B</sa-radio>
+        <sa-radio value="c">C</sa-radio>
+        <sa-radio value="d">D</sa-radio>
+      </sa-radio-group>
+    </div>
+    <div class="col-xs-4">
+      <label>设置Value</label>
+      <input class="form-control" [(ngModel)]="val">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <label>是否禁用 {{disabled}}</label>
+      <sa-radio-group [(ngModel)]="disabled">
+        <sa-radio>True</sa-radio>
+        <sa-radio [value]="false">False</sa-radio>
+      </sa-radio-group>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-6">
+        <label>非inline模式</label>
+        <sa-radio-group [(ngModel)]="disabled" [inline]="false">
+          <sa-radio>True</sa-radio>
+          <sa-radio [value]="false">False</sa-radio>
+        </sa-radio-group>
+      </div>
+    </div>
+</div>

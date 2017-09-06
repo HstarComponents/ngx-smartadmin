@@ -8,7 +8,7 @@
 | onText | string | | 'ON' | 开启状态显示的文本 |
 | offText | string | | 'OFF' | 关闭状态显示的文本 |
 | disabled | boolean | | false | 是否禁用 |
-| name | string | | 'sa-switch' | 设置switch控件的name |
+| name | string | | '' | 设置switch控件的name |
  
 ## Slots（ng-content占位符）
 

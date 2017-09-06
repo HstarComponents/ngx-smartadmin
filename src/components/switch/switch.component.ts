@@ -24,7 +24,7 @@ export class SwitchComponent implements OnInit {
   public disabled: boolean = false;
 
   @Input()
-  public name: string = 'switch';
+  public name: string = '';
 
   private checked: boolean;
 
