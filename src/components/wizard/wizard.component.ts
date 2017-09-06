@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, ElementRef, AfterViewInit, EventEmitter } from '@angular/core';
+import './wizard.component.styl';
 
 export interface Step {
   value: string;

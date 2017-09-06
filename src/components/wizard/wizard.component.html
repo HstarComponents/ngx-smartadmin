@@ -1,27 +1,28 @@
-<ul class="sa-wizard bootstrapWizard" *ngIf="type !== 'fuelux'">
-  <li *ngFor="let step of steps; let i = index" [ngClass]="{'active': i <= currentIndex}" (click)="changeCurrentStep(step)">
-    <a href="javascript:;">
+<div class="sa-wizard">
+  <ul class="bootstrapWizard" *ngIf="type !== 'fuelux'">
+    <li *ngFor="let step of steps; let i = index" [ngClass]="{'active': i <= currentIndex}" (click)="changeCurrentStep(step)">
+      <a href="javascript:;">
       <span class="step">{{i + 1}}</span> <span class="title">{{step.title}}</span>
     </a>
-  </li>
-</ul>
-<div class="fuelux" *ngIf="type === 'fuelux'">
-  <div class="wizard no-steps-container">
-    <ul class="steps" style="margin-left: 0">
-      <li *ngFor="let step of steps; let i = index" [ngClass]="{'active': i <= currentIndex}" (click)="changeCurrentStep(step)">
-        <span class="badge">{{i + 1}}</span>{{step.title}}<span class="chevron"></span>
-      </li>
-    </ul>
-    <div class="actions">
-      <button type="button" class="btn btn-sm btn-primary btn-prev" [disabled]="currentIndex === 0" (click)="prev()">
+    </li>
+  </ul>
+  <div class="fuelux" *ngIf="type === 'fuelux'">
+    <div class="wizard no-steps-container">
+      <ul class="steps" style="margin-left: 0">
+        <li *ngFor="let step of steps; let i = index" [ngClass]="{'active': i <= currentIndex}" (click)="changeCurrentStep(step)">
+          <span class="badge">{{i + 1}}</span>{{step.title}}<span class="chevron"></span>
+        </li>
+      </ul>
+      <div class="actions">
+        <button type="button" class="btn btn-sm btn-primary btn-prev" [disabled]="currentIndex === 0" (click)="prev()">
         <i class="fa fa-arrow-left"></i>
         {{prevText}}
       </button>
-      <button type="button" class="btn btn-sm btn-success btn-next" [disabled]="currentIndex === steps.length - 1" (click)="next()">
+        <button type="button" class="btn btn-sm btn-success btn-next" [disabled]="currentIndex === steps.length - 1" (click)="next()">
         {{nextText}}
         <i class="fa fa-arrow-right"></i>
       </button>
+      </div>
     </div>
   </div>
-
 </div>

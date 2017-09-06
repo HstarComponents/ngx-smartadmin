@@ -1,1 +1,7 @@
-<div class="wizard-demo"> Hello WizardDemoComponent! </div>
+<div class="page-wizard-demo">
+  <sa-wizard [steps]="steps" [value]="stepValue" (stepClick)="onStepClick($event)"></sa-wizard>
+  <br>
+  <br>
+  <br>
+  <sa-wizard type="fuelux" [steps]="steps" [value]="stepValue" (stepClick)="onStepClick($event)"></sa-wizard>
+</div>
