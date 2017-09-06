@@ -15,18 +15,18 @@ export const SWITCH_VALUE_ACCESSOR: any = {
 })
 export class SwitchComponent implements OnInit {
   @Input()
-  private onText: string = 'ON';
+  public onText: string = 'ON';
 
   @Input()
-  private offText: string = 'OFF';
+  public offText: string = 'OFF';
 
   @Input()
-  private disabled: boolean = false;
+  public disabled: boolean = false;
 
   @Input()
-  private name: string = 'switch';
+  public name: string = 'switch';
 
-  private innerValue: boolean;
+  private checked: boolean;
 
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
@@ -39,12 +39,12 @@ export class SwitchComponent implements OnInit {
   }
   public onUserClick(evt: Event) {
     let checked = (evt.target as HTMLInputElement).checked;
-    this.innerValue = checked;
-    this.onChange(this.innerValue);
+    this.checked = checked;
+    this.onChange(this.checked);
   }
 
   public writeValue(value: any): void {
-    this.innerValue = value;
+    this.checked = value;
   }
 
   public registerOnChange(fn: (_: any) => {}): void {

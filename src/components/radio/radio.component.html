@@ -1,1 +1,5 @@
-<div class="radio"> Hello RadioComponent! </div>
+<label class="sa-radio radio" [class.state-disabled]="disabled">
+  <input type="radio" [attr.name]="name" [disabled]="disabled" [checked]="checked" (click)="onUserClick($event)">
+  <i></i>
+  <ng-content></ng-content>
+</label>

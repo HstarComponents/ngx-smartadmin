@@ -8,5 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SwitchDemoComponent implements OnInit {
 
   public val: boolean = false;
+  public val2: boolean = true;
+  
   ngOnInit() { }
 }

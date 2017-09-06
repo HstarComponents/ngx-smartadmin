@@ -1,1 +1,40 @@
-<div class="radio-demo"> Hello RadioDemoComponent! </div>
+<div class="page-radio-demo">
+  <div class="row">
+    <div class="col-xs-4">
+      <label>默认单选输入</label>
+      <sa-radio name="r1" [(ngModel)]="val">单选状态：{{val}}
+      </sa-radio>
+    </div>
+    <div class="col-xs-4">
+      <label>value="abc"的单选</label>
+      <sa-radio name="r2" value="abc" [(ngModel)]="val2">单选状态：{{val2}}
+      </sa-radio>
+    </div>
+    <div class="col-xs-4 smart-form">
+      <label>多个单选，当前选中（{{val3}}）</label>
+      <div class="inline-group">
+        <sa-radio name="r3" value="yes" [(ngModel)]="val3">Yes(value='yes')
+        </sa-radio>
+        <sa-radio name="r3" value="no" [(ngModel)]="val3">No(value='no')
+        </sa-radio>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <label>禁用的输入框</label>
+      <sa-radio name="r4" [disabled]="true">点我无效
+      </sa-radio>
+    </div>
+    <div class="col-xs-4">
+      <label>禁用的选中状态的输入框</label>
+      <sa-radio name="r4" [(ngModel)]="val4" [disabled]="true">点我无效
+      </sa-radio>
+    </div>
+    <div class="col-xs-4">
+      <label>没有绑定ngModel</label>
+      <sa-radio name="r5">点我试试
+      </sa-radio>
+    </div>
+  </div>
+</div>
