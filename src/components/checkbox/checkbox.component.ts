@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, forwardRef, Host, HostBinding, Optional, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, Host, HostBinding, Input, OnChanges, OnInit, Optional, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { CheckboxGroupComponent } from '../checkbox-group/checkbox-group.component';
 
 export const CHECKBOX_VALUE_ACCESSOR: any = {
@@ -16,7 +17,7 @@ export const CHECKBOX_VALUE_ACCESSOR: any = {
 
 export class CheckboxComponent implements OnInit, OnChanges, ControlValueAccessor {
 
-  private checked: boolean = false;
+  public checked: boolean = false;
   public innerValue: boolean | any = true;
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
@@ -48,7 +49,7 @@ export class CheckboxComponent implements OnInit, OnChanges, ControlValueAccesso
     this.onChange(this.checked ? this.innerValue : null);
     // 如果有 checkbox-group，则需要反向设置value
     if (this.checkboxGroup) {
-      // this.checkboxGroup.setRadioGroupValue(this.innerValue);
+      this.checkboxGroup.notifyValueChanged();
     }
   }
 

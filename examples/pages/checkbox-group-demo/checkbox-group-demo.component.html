@@ -1,1 +1,27 @@
-<div class="checkbox-group-demo"> Hello CheckboxGroupDemoComponent! </div>
+<div class="page-checkbox-group-demo">
+  <div class="row">
+    <div class="col-xs-6">
+      <label for="">Value is: {{checkGroupVal}}</label>
+      <sa-checkbox-group [(ngModel)]="checkGroupVal" [disabled]="disabled">
+        <sa-checkbox>A</sa-checkbox>
+        <sa-checkbox>B</sa-checkbox>
+        <sa-checkbox>C</sa-checkbox>
+        <sa-checkbox>D</sa-checkbox>
+      </sa-checkbox-group>
+    </div>
+    <div class="col-xs-6">
+      <label for="">Not Inline</label>
+      <sa-checkbox-group [inline]="false" [(ngModel)]="checkGroupVal">
+        <sa-checkbox>A</sa-checkbox>
+        <sa-checkbox>B</sa-checkbox>
+        <sa-checkbox>C</sa-checkbox>
+        <sa-checkbox>D</sa-checkbox>
+      </sa-checkbox-group>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <sa-checkbox [(ngModel)]="disabled">是否禁用</sa-checkbox>
+    </div>
+  </div>
+</div>
