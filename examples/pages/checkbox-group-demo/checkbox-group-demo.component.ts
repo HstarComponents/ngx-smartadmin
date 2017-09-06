@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CheckboxGroupDemoComponent implements OnInit {
-  
+
   public checkGroupVal: any[] = [];
+
+  public disabled: false;
 
   ngOnInit() { }
 }

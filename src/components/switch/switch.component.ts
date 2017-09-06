@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, forwardRef, ElementRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import './switch.component.styl';
+
+import { Component, ElementRef, Input, OnInit, forwardRef } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const SWITCH_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -26,7 +27,7 @@ export class SwitchComponent implements OnInit {
   @Input()
   public name: string = '';
 
-  private checked: boolean;
+  public checked: boolean;
 
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;

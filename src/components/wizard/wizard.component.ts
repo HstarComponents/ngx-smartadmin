@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, ElementRef, AfterViewInit, EventEmitter } from '@angular/core';
 import './wizard.component.styl';
+
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface Step {
   value: string;
@@ -13,22 +14,22 @@ export interface Step {
 export class WizardComponent {
 
   @Input()
-  private type: string = ''; // 可选 ['', 'fuelux']
+  public type: string = ''; // 可选 ['', 'fuelux']
 
   @Input()
-  private steps: Array<Step> = [];
+  public steps: Array<Step> = [];
 
   @Input('value')
-  private currentValue: string;
+  public currentValue: string;
 
   @Input()
-  private prevText: string = 'Prev';
+  public prevText: string = 'Prev';
 
   @Input()
-  private nextText: string = 'Next';
+  public nextText: string = 'Next';
 
   @Output()
-  private stepClick: EventEmitter<Step> = new EventEmitter();
+  public stepClick: EventEmitter<Step> = new EventEmitter();
 
   private get currentIndex() {
     return this.steps.findIndex(x => x.value === this.currentValue);

@@ -27,7 +27,7 @@ export class RadioComponent implements OnInit, OnChanges {
 
   public innerValue: boolean | any = true;
 
-  private checked: boolean = false;
+  public checked: boolean = false;
 
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
