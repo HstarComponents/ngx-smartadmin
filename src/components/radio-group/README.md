@@ -18,3 +18,4 @@
 
 | Name | Paramters | Description |
 | --- | --- | --- |
+| onValueChange | value:string | radio-group的当前选中项 |

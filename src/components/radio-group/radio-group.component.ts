@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, ContentChildren } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, ContentChildren, EventEmitter, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { RadioComponent } from '../radio/radio.component';
 
@@ -26,6 +26,9 @@ export class RadioGroupComponent implements OnInit, OnChanges {
   @ContentChildren(forwardRef(() => RadioComponent))
   public radioList: Array<RadioComponent> = [];
 
+  @Output()
+  public onValueChange: EventEmitter<any> = new EventEmitter();
+
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
 
@@ -45,6 +48,7 @@ export class RadioGroupComponent implements OnInit, OnChanges {
   public setRadioGroupValue(value: any) {
     this.innerValue = value;
     this.onChange(this.innerValue);
+    this.onValueChange.emit(this.innerValue);
     this._setRadioValue();
   }
 

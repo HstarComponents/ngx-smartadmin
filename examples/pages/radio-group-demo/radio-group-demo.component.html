@@ -26,7 +26,7 @@
   <div class="row">
       <div class="col-xs-6">
         <label>非inline模式</label>
-        <sa-radio-group [(ngModel)]="disabled" [inline]="false">
+        <sa-radio-group [(ngModel)]="disabled" [inline]="false" (onValueChange)="onValueChange($event)">
           <sa-radio>True</sa-radio>
           <sa-radio [value]="false">False</sa-radio>
         </sa-radio-group>

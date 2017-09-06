@@ -12,4 +12,8 @@ export class RadioGroupDemoComponent implements OnInit {
   public disabled: boolean = false;
 
   ngOnInit() { }
+
+  public onValueChange(val: any) {
+    console.log('选中项变化：', val);
+  }
 }
