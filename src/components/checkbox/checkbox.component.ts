@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, forwardRef, Host, HostBinding, Optional } from '@angular/core';
+import { Component, OnInit, Input, forwardRef, Host, HostBinding, Optional, SimpleChanges, OnChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CheckboxGroupComponent } from '../checkbox-group/checkbox-group.component';
 
@@ -14,24 +14,20 @@ export const CHECKBOX_VALUE_ACCESSOR: any = {
   providers: [CHECKBOX_VALUE_ACCESSOR]
 })
 
-export class CheckboxComponent implements OnInit, ControlValueAccessor {
-  onChange: (_: any) => void;
-  onTouched: () => void;
+export class CheckboxComponent implements OnInit, OnChanges, ControlValueAccessor {
 
+  private checked: boolean = false;
+  public innerValue: boolean | any = true;
+  public onChange: any = Function.prototype;
+  public onTouched: any = Function.prototype;
+
+  @Input()
   public disabled: boolean = false;
-
-  public innerValue: boolean = false;
-
-  public isInCheckboxGroup = false;
 
   @Input()
   private value: any;
 
-  constructor(
-    @Optional()
-    @Host()
-    private checkboxGroup: CheckboxGroupComponent
-  ) {
+  constructor( @Optional() @Host() private checkboxGroup: CheckboxGroupComponent) {
   }
 
   @HostBinding('class.smart-form')
@@ -40,18 +36,24 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
   }
 
-  public onCheckboxChanged() {
-    let val;
-    if (this.value) {
-      val = this.innerValue ? this.value : void 0;
-    } else {
-      val = this.innerValue;
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.value) {
+      this.innerValue = this.value === void 0 ? true : this.value;
     }
-    this.onChange && this.onChange(val);
+  }
+
+  public onCheckedChange(evt: Event) {
+    let checked = (evt.target as HTMLInputElement).checked;
+    this.checked = checked;
+    this.onChange(this.checked ? this.innerValue : null);
+    // 如果有 checkbox-group，则需要反向设置value
+    if (this.checkboxGroup) {
+      // this.checkboxGroup.setRadioGroupValue(this.innerValue);
+    }
   }
 
   writeValue(value: any): void {
-    this.innerValue = (this.value || true) === value;
+    this.checked = this.innerValue === value;
   }
 
   registerOnChange(fn: (_: any) => {}): void {

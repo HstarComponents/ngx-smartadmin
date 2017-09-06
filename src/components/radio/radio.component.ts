@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, Optional } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, Optional, Host } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { RadioGroupComponent } from '../radio-group/radio-group.component';
 
@@ -31,7 +31,7 @@ export class RadioComponent implements OnInit, OnChanges {
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
 
-  constructor(private elementRef: ElementRef, @Optional() private radioGroup: RadioGroupComponent) {
+  constructor(private elementRef: ElementRef, @Optional() @Host() private radioGroup: RadioGroupComponent) {
   }
 
   ngOnInit() {

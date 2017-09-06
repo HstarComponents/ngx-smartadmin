@@ -1,1 +1,41 @@
-<div class="checkbox-demo"> Hello CheckboxDemoComponent! </div>
+<div class="page-checkbox-demo">
+    <div class="row">
+      <div class="col-xs-4">
+        <label>默认复选框</label>
+        <sa-checkbox [(ngModel)]="val">是否选中：{{val}}
+        </sa-checkbox>
+      </div>
+      <div class="col-xs-4">
+        <label>value="abc"的复选框</label>
+        <sa-checkbox value="abc" [(ngModel)]="val2">value = {{val2}}
+        </sa-checkbox>
+      </div>
+      <div class="col-xs-4 smart-form">
+        <label>多个复选框，只能选中一个，当前选中（{{val3}}）</label>
+        <div class="inline-group">
+          <sa-checkbox name="r3" value="yes" [(ngModel)]="val3">Yes(value='yes')
+          </sa-checkbox>
+          <sa-checkbox name="r3" value="no" [(ngModel)]="val3">No(value='no')
+          </sa-checkbox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <label>禁用的复选框</label>
+        <sa-checkbox [disabled]="true">点我无效
+        </sa-checkbox>
+      </div>
+      <div class="col-xs-4">
+        <label>禁用的选中状态的输入框</label>
+        <sa-checkbox [(ngModel)]="val4" [disabled]="true">点我无效
+        </sa-checkbox>
+      </div>
+      <div class="col-xs-4">
+        <label>没有绑定ngModel</label>
+        <sa-checkbox>点我试试
+        </sa-checkbox>
+      </div>
+    </div>
+  </div>
+  

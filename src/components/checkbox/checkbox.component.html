@@ -1,5 +1,5 @@
 <label class="sa-checkbox checkbox" [class.state-disabled]="disabled">
-  <input type="checkbox" name="checkbox" [(ngModel)]="innerValue" (change)="onCheckboxChanged()" [disabled]="disabled">
+  <input type="checkbox" name="checkbox" [disabled]="disabled" [checked]="checked" (change)="onCheckedChange($event)">
 	<i></i>
   <ng-content></ng-content>
 </label>
