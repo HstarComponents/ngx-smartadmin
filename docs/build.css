@@ -1,3 +1,12 @@
+.sa-switch.toggle {
+  padding-left: 61px;
+  padding-right: 0;
+}
+.sa-switch.toggle i {
+  top: 3px;
+  right: auto;
+  left: 0;
+}
 .sa-accordion .sa-accordion-item {
   margin-top: -1px;
 }
@@ -46,8 +55,34 @@
 .sa-progress {
   margin-bottom: 0;
 }
+.sa-widget.jarviswidget-fullscreen-mode {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+}
+.sa-widget.jarviswidget-fullscreen-mode .sa-widget-content {
+  height: calc(100vh - 34px);
+  overflow: auto;
+}
+.sa-widget .jarviswidget {
+  margin-bottom: 0;
+}
+.sa-wizard::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+[hidden] {
+  display: none !important;
+}
 .fixed-navigation nav {
   padding-bottom: 20px;
+}
+.fixed-navigation .navbar-nav a {
+  padding: 15.5px 10px;
 }
 .page-notfound .error-text-2 {
   text-align: center;
@@ -448,6 +483,12 @@
 }
 .page-progress-demo .sa-progress {
   margin-bottom: 20px;
+}
+.margin-top-20 {
+  margin-top: 10px;
+}
+.row {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=build.css.map*/
