@@ -1,1 +1,5 @@
-<div class="sa-switch"> Hello SwitchComponent! </div>
+<label class="sa-switch toggle" [class.state-disabled]="disabled">
+  <input type="checkbox" [attr.name]="name" [disabled]="disabled" [checked]="innerValue" (click)="onUserClick($event)">
+  <i [attr.data-swchon-text]="onText" [attr.data-swchoff-text]="offText"></i>
+  <ng-content></ng-content>
+</label>

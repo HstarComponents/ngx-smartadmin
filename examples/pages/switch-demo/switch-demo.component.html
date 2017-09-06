@@ -1,1 +1,22 @@
-<div class="switch-demo"> Hello SwitchDemoComponent! </div>
+<div class="page-switch-demo">
+  <div class="row">
+    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="val"></div>
+    <div class="col-xs-5">
+      <sa-switch [(ngModel)]="val">开关状态：{{val}}
+      </sa-switch>
+    </div>
+    <div class="col-xs-5">
+      <sa-switch [(ngModel)]="val" offText="关" onText="开">动态设置文本
+      </sa-switch>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-5 col-xs-offset-2">
+      <sa-switch [(ngModel)]="val"></sa-switch>
+    </div>
+    <div class="col-xs-5">
+      <sa-switch [(ngModel)]="val" [disabled]="true" offText="关" onText="开">禁用
+      </sa-switch>
+    </div>
+  </div>
+</div>
