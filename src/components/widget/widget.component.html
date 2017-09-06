@@ -1,7 +1,7 @@
 <div class="sa-widget" [ngClass]="{'jarviswidget-fullscreen-mode': fullScreenMode}">
   <div class="jarviswidget jarviswidget-collapsed" [ngClass]="widgetColorClass">
     <header>
-      <div class="jarviswidget-ctrls" role="menu">
+      <div class="jarviswidget-ctrls">
         <a href="javascript:;" class="button-icon jarviswidget-toggle-btn" *ngIf="showCollapseBtn" (click)="toggleCollapse()">
           <i class="fa" [ngClass]="{'fa-plus': widgetCollapsed, 'fa-minus': !widgetCollapsed}"></i>
         </a>
@@ -9,7 +9,7 @@
           <i class="fa" [ngClass]="{'fa-compress': fullScreenMode, 'fa-expand': !fullScreenMode}"></i>
         </a>
       </div>
-      <div class="widget-toolbar" #toolbar [hidden]="!hasCustomToolbar">
+      <div class="widget-toolbar" #toolbar [style.display]="hasCustomToolbar ? 'block': 'none'">
         <ng-content select="[slot=toolbar]"></ng-content>
       </div>
       <div class="widget-toolbar" *ngIf="showPickColorBtn">

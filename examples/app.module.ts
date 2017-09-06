@@ -6,7 +6,8 @@ import { SmartAdminModule } from '../src';
 
 import { COMPONENTS } from './components';
 import { AppComponent, ALL_PAGES } from './pages';
-import { AppRoutingModule } from './app.routing'; //TODO: Create app.routing
+import { AppRoutingModule } from './app.routing';
+import './styl/common.styl';
 
 @NgModule({
   imports: [

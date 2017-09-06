@@ -1,1 +1,52 @@
-<div class="widget-demo"> Hello WidgetDemoComponent! </div>
+<div class="page-widget-demo">
+  <div class="row">
+    <div class="col-xs-4">
+      <sa-widget>
+        Default Widget
+      </sa-widget>
+    </div>
+    <div class="col-xs-4">
+      <sa-widget header="带Header的Widget">
+        Widget Content
+      </sa-widget>
+    </div>
+    <div class="col-xs-4">
+      <sa-widget header="包含ICON的Widget" icon="fa fa-star">
+        Widget Content
+      </sa-widget>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <sa-widget header="显示所有可用按钮" [showFullscreenBtn]="true" [showPickColorBtn]="true">
+        Widget Content
+      </sa-widget>
+    </div>
+    <div class="col-xs-4">
+      <sa-widget header="自定义Header">
+        <div slot="header">
+          <strong>自定义Header2</strong>
+        </div>
+        Widget Content
+      </sa-widget>
+    </div>
+    <div class="col-xs-4">
+      <sa-widget header="自定义Toolbar">
+        <div slot="toolbar">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-xs active">
+                  <input type="radio" name="style-a1" id="style-a1"> <i class="fa fa-play"></i>
+                </label>
+            <label class="btn btn-default btn-xs">
+                  <input type="radio" name="style-a2" id="style-a2"> <i class="fa fa-pause"></i>
+                </label>
+            <label class="btn btn-default btn-xs">
+                  <input type="radio" name="style-a2" id="style-a3"> <i class="fa fa-stop"></i>
+                </label>
+          </div>
+        </div>
+        Widget Content
+      </sa-widget>
+    </div>
+  </div>
+</div>

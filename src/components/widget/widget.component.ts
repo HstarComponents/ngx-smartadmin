@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ElementRef, ViewChild, SimpleChanges } from '@angular/core';
+import './widget.component.styl';
 
 @Component({
   selector: 'sa-widget',

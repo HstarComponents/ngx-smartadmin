@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ALL_COMPONENTS } from './components';
+import './styl/all.styl';
 
 @NgModule({
   imports: [

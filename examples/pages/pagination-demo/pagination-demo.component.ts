@@ -16,6 +16,6 @@ export class PaginationDemoComponent implements OnInit {
   ngOnInit() { }
 
   public onPageChanged(pageIndex: number) {
-    alert(pageIndex);
+    console.log('页码变更，当前页：', pageIndex);
   }
 }
