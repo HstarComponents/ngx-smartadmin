@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Http } from '@angular/http';
 import './demo-container.component.styl';
+
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'demo-container',

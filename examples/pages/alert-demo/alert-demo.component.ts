@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import './alert-demo.component.styl';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'alert-demo',

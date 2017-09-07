@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
+import './styl/common.styl';
+
+import { ALL_PAGES, AppComponent } from './pages';
+
+import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
+import { COMPONENTS } from './components';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 import { SmartAdminModule } from '../src';
-
-import { COMPONENTS } from './components';
-import { AppComponent, ALL_PAGES } from './pages';
-import { AppRoutingModule } from './app.routing';
-import './styl/common.styl';
 
 @NgModule({
   imports: [

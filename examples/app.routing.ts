@@ -1,31 +1,27 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
 import {
-  HomeComponent,
-  NotfoundComponent,
-  DemoContainerComponent,
-
   AccordionDemoComponent,
   AlertDemoComponent,
-  CollapseBoxDemoComponent,
-  ModalDemoComponent,
-  PaginationDemoComponent,
-  ProgressDemoComponent,
-  TabsetDemoComponent,
-  WidgetDemoComponent,
-  WizardDemoComponent,
-
-  TableDemoComponent,
-
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
+  CollapseBoxDemoComponent,
+  DemoContainerComponent,
+  HomeComponent,
+  ModalDemoComponent,
+  NotfoundComponent,
+  PaginationDemoComponent,
+  ProgressDemoComponent,
   RadioDemoComponent,
   RadioGroupDemoComponent,
   RatingDemoComponent,
-  SwitchDemoComponent
-
+  SwitchDemoComponent,
+  TableDemoComponent,
+  TabsetDemoComponent,
+  WidgetDemoComponent,
+  WizardDemoComponent
 } from './pages';
+import { RouterModule, Routes } from '@angular/router';
+
+import { NgModule } from '@angular/core';
 
 const demoRoutes: Routes = [
   { path: 'accordion', component: AccordionDemoComponent },
