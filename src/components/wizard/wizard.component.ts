@@ -29,7 +29,7 @@ export class WizardComponent {
   public nextText: string = 'Next';
 
   @Output()
-  public stepClick: EventEmitter<Step> = new EventEmitter();
+  public onStepClick: EventEmitter<Step> = new EventEmitter();
 
   private get currentIndex() {
     return this.steps.findIndex(x => x.value === this.currentValue);
@@ -54,6 +54,6 @@ export class WizardComponent {
   }
 
   private changeCurrentStep(step: Step) {
-    this.stepClick.emit(step);
+    this.onStepClick.emit(step);
   }
 }

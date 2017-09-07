@@ -18,7 +18,7 @@
     </div>
   </form>
   <hr>
-  <sa-pagination [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex" (pageChanged)="onPageChanged($event)"></sa-pagination>
+  <sa-pagination [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex" (onPageChange)="onPageChanged($event)"></sa-pagination>
   <br>
   <sa-pagination size="lg" [totalCount]="pageObj.totalCount" [pageSize]="pageObj.pageSize" name="pageIndex" [(ngModel)]="pageIndex"></sa-pagination>
   <br>

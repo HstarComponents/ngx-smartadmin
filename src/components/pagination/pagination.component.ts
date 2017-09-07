@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnChanges, forwardRef, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const PAGINATION_VALUE_ACCESSOR: any = {
@@ -40,7 +40,7 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
   }
 
   @Output()
-  public pageChanged: EventEmitter<number> = new EventEmitter();
+  public onPageChange: EventEmitter<number> = new EventEmitter();
 
   ngOnInit() {
   }
@@ -65,7 +65,7 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
   public writeValue(value: any): void {
     this.pageIndex = Math.max(1, +value);
     this.buildPages();
-    this.pageChanged.next(this.pageIndex);
+    this.onPageChange.next(this.pageIndex);
   }
 
   public registerOnChange(fn: (_: any) => {}): void {
@@ -78,7 +78,7 @@ export class PaginationComponent implements ControlValueAccessor, OnInit, OnChan
 
   private emitValue() {
     this.onChange(this.pageIndex);
-    this.pageChanged.next(this.pageIndex);
+    this.onPageChange.next(this.pageIndex);
   }
 
   private setPaginationClass() {

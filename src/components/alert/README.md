@@ -21,4 +21,4 @@
 
 | Name | Paramters | Description |
 | --- | --- | --- |
-| close | boolean | Alert组件关闭后触发（点击关闭按钮会引起组件关闭） |
+| onClose | boolean | Alert组件关闭后触发（点击关闭按钮会引起组件关闭） |

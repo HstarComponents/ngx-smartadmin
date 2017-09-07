@@ -28,4 +28,4 @@ Setp: {
 
 | Name | Paramters | Description |
 | --- | --- | --- |
-| stepClick | Step | 步骤条被点击时触发 |
+| onStepClick | Step | 步骤条被点击时触发 |

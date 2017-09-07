@@ -1,8 +1,18 @@
-import {
-  Component, OnInit, Input, Output, ElementRef, OnChanges, AfterViewInit, OnDestroy,
-  EventEmitter, ViewChild, SimpleChanges
-} from '@angular/core';
 import './modal.component.styl';
+
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Output,
+  SimpleChanges,
+  ViewChild
+} from '@angular/core';
 
 const defaults = {
   backdrop: 'static',
@@ -99,10 +109,10 @@ export class ModalComponent implements OnInit, AfterViewInit {
   public onHidden: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  public cancel: EventEmitter<any> = new EventEmitter();
+  public onCancel: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  public ok: EventEmitter<any> = new EventEmitter();
+  public onOk: EventEmitter<any> = new EventEmitter();
 
   @Input()
   public set shown(val: boolean) {
@@ -195,12 +205,12 @@ export class ModalComponent implements OnInit, AfterViewInit {
   }
 
   onCancelClick() {
-    this.cancel.emit();
+    this.onCancel.emit();
     this.hideModal();
   }
 
   onOkClick() {
-    this.ok.emit();
+    this.onOk.emit();
   }
 
   private initModalPosition() {

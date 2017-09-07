@@ -18,7 +18,7 @@
   <sa-modal [(shown)]="modal4Shown" header="Custom okText" okText="OK TEXT">
     自定义OkText
   </sa-modal>
-  <sa-modal [(shown)]="modal5Shown" header="点我拖拽" okText="OK Button" [draggable]="true" (ok)="onOkBtnClick()">
+  <sa-modal [(shown)]="modal5Shown" header="点我拖拽" okText="OK Button" [draggable]="true" (onOk)="onOkBtnClick()">
     一个可以被拖拽的弹出层，点击<b>OK Button</b>有惊喜哦！
   </sa-modal>
   <sa-modal [(shown)]="modal6Shown" header="自定义Footer" okText="OK TEXT">

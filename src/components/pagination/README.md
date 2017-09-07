@@ -19,4 +19,4 @@
 
 | Name | Paramters | Description |
 | --- | --- | --- |
-| pageChanged | number | 页码变更后触发，并传入当前选择的页码 |
+| onPageChange | number | 页码变更后触发，并传入当前选择的页码 |

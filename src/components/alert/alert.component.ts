@@ -1,5 +1,6 @@
-import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import './alert.component.styl';
+
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'sa-alert',
@@ -26,7 +27,7 @@ export class AlertComponent implements OnInit, OnChanges {
   public closable: boolean = true;
 
   @Output()
-  public close: EventEmitter<any> = new EventEmitter();
+  public onClose: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
     this.setInnerClass();
