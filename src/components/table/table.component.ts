@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ContentChildren, QueryList, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, ContentChildren, EventEmitter, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges } from '@angular/core';
+
 import { TableColumnDirective } from './table-column.directive';
 
 @Component({

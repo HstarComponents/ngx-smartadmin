@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, ElementRef, forwardRef, SimpleChanges } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const RATING_VALUE_ACCESSOR: any = {

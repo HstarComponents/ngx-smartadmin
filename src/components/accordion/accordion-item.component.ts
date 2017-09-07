@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, ElementRef, AfterViewInit, OnChanges, EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+
 import { AccordionComponent } from './accordion.component';
 
 @Component({

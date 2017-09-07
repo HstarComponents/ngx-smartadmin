@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, OnChanges, forwardRef, ElementRef, SimpleChanges, ContentChildren, EventEmitter, Output } from '@angular/core';
+import { Component, ContentChildren, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { RadioComponent } from '../radio/radio.component';
 
 export const RADIO_VALUE_ACCESSOR: any = {
