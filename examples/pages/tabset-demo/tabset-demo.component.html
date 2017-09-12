@@ -1,5 +1,5 @@
 <div class="page-tabset-demo">
-  当前选中项的名字：{{selected}}
+  当前选中项的名字：{{selected}} <button class="btn btn-primary" (click)="selected = 'tabpane-1'">设置为tabpane-1</button>
   <hr>
   <sa-tabset [(selected)]="selected">
     <sa-tab-item header="Tab1">
