@@ -1,9 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## v0.2.0 (2017.09.xx)
+## v0.2.0 (2017.09.12)
 
 - 新增多种表单控件
+- 打包出独立CSS文件
+- 基础控件全部完成
 
 ## v0.1.1 (2017.08.30)
 
