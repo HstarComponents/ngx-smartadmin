@@ -1,3 +1,5 @@
+import './rating.component.styl';
+
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -17,9 +19,9 @@ export class RatingComponent implements ControlValueAccessor, OnInit {
   public onChange: any = Function.prototype;
   public onTouched: any = Function.prototype;
 
-  private value: number = 0;
-  private hoverIdx: number = 0;
-  private rateArr: any[] = [];
+  public value: number = 0;
+  public hoverIdx: number = 0;
+  public rateArr: any[] = [];
 
   @Input()
   private maxNum: number = 5;

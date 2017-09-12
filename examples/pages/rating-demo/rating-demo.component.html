@@ -1,1 +1,15 @@
-<div class="rating-demo"> Hello RatingDemoComponent! </div>
+<div class="page-rating-demo">
+  当前值：{{ratingVal}}，<input type="number" [(ngModel)]="ratingVal">
+  <hr>
+  <div class="row">
+    <div class="col-xs-4">
+      <sa-rating [(ngModel)]="ratingVal"></sa-rating>
+    </div>
+    <div class="col-xs-4">
+      <sa-rating [(ngModel)]="ratingVal" [maxNum]="10"></sa-rating>
+    </div>
+    <div class="col-xs-4">
+      <sa-rating [(ngModel)]="ratingVal" rateClass="fa fa-fire"></sa-rating>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'rating-demo',
-	templateUrl: 'rating-demo.component.html'
+  selector: 'rating-demo',
+  templateUrl: 'rating-demo.component.html'
 })
 
 export class RatingDemoComponent implements OnInit {
 
-	ngOnInit() { }
+  public ratingVal = 2;
+  
+  ngOnInit() { }
 }
