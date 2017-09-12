@@ -7,7 +7,7 @@ const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 const baseConfig = require('./webpack.base.conf');
 const util = require('./util');
 
-module.exports = webpackMerge(baseConfig, {
+const libConfig = webpackMerge(baseConfig, {
   devtool: '#source-map',
   entry: {
     'ngx-smartadmin': './src/index.ts'
@@ -46,3 +46,24 @@ module.exports = webpackMerge(baseConfig, {
     })
   ]
 });
+
+libConfig.module.rules.pop();
+libConfig.module.rules.pop();
+libConfig.module.rules.push({
+  test: /\.css$/, use: ExtractTextPlugin.extract({
+    use: {
+      loader: 'css-loader',
+      options: { minimize: true }
+    }
+  })
+});
+libConfig.module.rules.push({
+  test: /\.styl$/, use: ExtractTextPlugin.extract({
+    use: [{
+      loader: 'css-loader',
+      options: { minimize: true }
+    }, 'stylus-loader']
+  })
+});
+
+module.exports = libConfig;

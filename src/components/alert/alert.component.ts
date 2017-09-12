@@ -42,7 +42,7 @@ export class AlertComponent implements OnInit, OnChanges {
   public onCloseBtnClick() {
     this.shown = false;
     this.shownChange.emit(false);
-    this.close.emit(false);
+    this.onClose.emit(false);
   }
 
   private setInnerClass() {
