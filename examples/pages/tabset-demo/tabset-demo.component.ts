@@ -1,5 +1,3 @@
-import './tabset-demo.component.styl';
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
