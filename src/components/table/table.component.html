@@ -6,7 +6,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of dataItems, let idx = index" [ngClass]="{odd: idx % 2 === 0, even: idx % 2 === 1}" (click)="rowClick(row, $event)">
+    <tr *ngFor="let row of innerSource, let idx = index" [ngClass]="{odd: idx % 2 === 0, even: idx % 2 === 1}" (click)="rowClick(row, $event)">
       <td *ngFor="let column of columns">
         <span *ngIf="!column.cellTemplate">{{row[column.field]}}</span>
         <ng-template [ngIf]="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngOutletContext]="{ item: row, column: column }"></ng-template>
@@ -18,14 +18,14 @@
       <td [attr.colspan]="columns.length">
         <div class="dt-toolbar-footer">
           <div class="col-sm-4 col-xs-12 hidden-xs">
-            <div class="dataTables_info">Showing {{1 + pageSize * (pageIndex - 1)}} to {{currentEndIdx}} of {{_totalCount}} entries
+            <div class="dataTables_info">Showing {{1 + pageSize * (pageIndex - 1)}} to {{currentEndIdx}} of {{totalCount}} entries
             </div>
           </div>
           <div class="col-xs-12 col-sm-8">
             <div class="dataTables_paginate paging_simple_numbers">
-              <sa-pagination [totalCount]="_totalCount" [pageSize]="pageSize" [(ngModel)]="pageIndex"></sa-pagination>
+              <sa-pagination [totalCount]="totalCount" [pageSize]="innerPageSize" [(ngModel)]="innerPageIndex" (onPageChange)="onInnerPageChange($event)"></sa-pagination>
             </div>
-            <select class="sa-table-pagesize-select" *ngIf="showPageSizeList" [ngModel]="pageSize" (ngModelChange)="onPageSizeSelectChange($event)">
+            <select class="sa-table-pagesize-select" *ngIf="showPageSizeList" [ngModel]="innerPageSize" (ngModelChange)="onPageSizeSelectChange($event)">
               <option *ngFor="let p of pageSizeList" [value]="p">{{p}}</option>
             </select>
           </div>

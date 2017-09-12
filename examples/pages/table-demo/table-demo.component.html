@@ -1,1 +1,30 @@
-<div class="table-demo"> Hello TableDemoComponent! </div>
+<div class="page-table-demo">
+  <div class="row">
+    <div class="col-xs-6">
+      <label for="">默认，客户端分页</label>
+      <sa-table [source]="dataList" [pageable]="true" (onSorting)="onSorting($event)" [pageSize]="pageSize" [totalCount]="totalCount"
+        [serverPaging]="false" (onPaging)="onPaging($event)" (onPageSizeChanged)="onPageSizeChanged($event)">
+        <sa-table-column header="Name" field="name" [width]="200" [sortable]="true">
+          <ng-template saTableCellTemplate let-item="item">
+            Name: {{item['name']}}
+          </ng-template>
+        </sa-table-column>
+        <sa-table-column header="Age" field="age" [sortable]="true">
+        </sa-table-column>
+      </sa-table>
+    </div>
+    <div class="col-xs-6">
+      <label for="">服务端分页</label>
+      <sa-table [source]="dataSource" [pageable]="true" (onSorting)="onSorting2($event)" [pageSize]="pageSize" [totalCount]="totalCount"
+        [serverPaging]="true" (onPaging)="onPaging($event)" (onPageSizeChanged)="onPageSizeChanged($event)">
+        <sa-table-column header="Name" field="name" [width]="200" [sortable]="true">
+          <ng-template saTableCellTemplate let-item="item">
+            Name: {{item['name']}}
+          </ng-template>
+        </sa-table-column>
+        <sa-table-column header="Age" field="age" [sortable]="true">
+        </sa-table-column>
+      </sa-table>
+    </div>
+  </div>
+</div>

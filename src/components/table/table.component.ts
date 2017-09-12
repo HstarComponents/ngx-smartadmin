@@ -1,133 +1,156 @@
+import './table.component.styl';
+
 import { Component, ContentChildren, EventEmitter, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges } from '@angular/core';
 
 import { TableColumnDirective } from './table-column.directive';
 
+export interface PagingObject {
+  pageIndex: number
+};
+
 @Component({
-    selector: 'sa-table',
-    templateUrl: 'table.component.html',
+  selector: 'sa-table',
+  templateUrl: 'table.component.html',
 })
 export class TableComponent implements OnInit, OnChanges {
 
-    private columns: Array<any> = [];
-    private _pageIndex: number = 1;
+  public columns: Array<any> = [];
+  public innerSource: Array<any> = [];
+  public innerPageIndex = 1;
+  public innerPageSize = 20;
 
-    private dataItems: Array<any> = [];
+  // public get pageIndex() {
+  //   return this._pageIndex;
+  // }
+  // public set pageIndex(v) {
+  //   this._pageIndex = v;
+  //   this.setDataItems();
+  //   this.onPaging.next({ pageIndex: v });
+  // }
 
-    private get _totalCount() {
-        return this.serverPaging ? this.totalCount : this.dataSource.length;
+  private get currentEndIdx() {
+    return Math.min(this.pageSize * this.pageIndex, this.totalCount);
+  }
+
+  @Input()
+  public source: Array<any> = [];
+
+  @Input()
+  public pageable: boolean = false;
+
+  @Input()
+  public pageSizeList = [10, 20, 50];
+
+  @Input()
+  public showPageSizeList: boolean = true;
+
+  @Input()
+  public pageSize: number = 20;
+
+  @Output()
+  public pageSizeChange: EventEmitter<number> = new EventEmitter();
+
+  @Input()
+  public pageIndex: number = 1;
+
+  @Output()
+  public pageIndexChange: EventEmitter<number> = new EventEmitter();
+
+  @Input()
+  public serverPaging: boolean = false;
+
+  @Input()
+  public totalCount: number = 0;
+
+  @Output()
+  private onSorting: EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  private onPaging: EventEmitter<PagingObject> = new EventEmitter();
+
+  @Output()
+  private onRowClick: EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  private onPageSizeChange: EventEmitter<number> = new EventEmitter();
+
+  @ContentChildren(TableColumnDirective)
+  private set columnTemplates(val: QueryList<TableColumnDirective>) {
+    if (val) {
+      this.columns = val.toArray();
     }
+  }
 
-    private get pageIndex() {
-        return this._pageIndex;
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.pageIndex) {
+      this.innerPageIndex = this.pageIndex;
     }
-    private set pageIndex(v) {
-        this._pageIndex = v;
+    if (changes.pageSize) {
+      this.innerPageSize = this.pageSize;
+    }
+    this.setDataItems();
+  }
+
+  public onInnerPageChange(pageIndex: number) {
+    this.innerPageIndex = pageIndex;
+    this.pageIndexChange.emit(pageIndex);
+    this.onPaging.emit({ pageIndex });
+    this.setDataItems();
+  }
+
+  public onPageSizeSelectChange(val: number) {
+    this.innerPageSize = +val;
+    this.onPageSizeChange.emit(this.innerPageSize);
+    this.setDataItems();
+  }
+
+  public onHeaderClick(column: any) {
+    if (column.sortable) {
+      for (let c of this.columns) {
+        if (c !== column) {
+          c.sort = '';
+        }
+      }
+      switch (column.sort) {
+        case '':
+        case 'desc':
+          column.sort = 'asc';
+          break;
+        case 'asc':
+          column.sort = 'desc';
+          break;
+      }
+      this.onSorting.next({
+        field: column.field,
+        header: column.header,
+        sort: column.sort
+      });
+      setTimeout(() => {
         this.setDataItems();
-        this.onPaging.next({ pageIndex: v });
+      });
     }
+  }
 
-    private get currentEndIdx() {
-        return Math.min(this.pageSize * this.pageIndex, this._totalCount);
+  public rowClick(rowData: any, evt: any) {
+    this.onRowClick.emit(rowData);
+  }
+
+  private setDataItems() {
+    if (!this.serverPaging) {
+      let result = [];
+      let startIdx = this.innerPageSize * (this.innerPageIndex - 1);
+      let endIdx = Math.min(startIdx + this.innerPageSize, this.source.length);
+      for (let i = startIdx; i < endIdx; i++) {
+        result.push(this.source[i]);
+      }
+      this.innerSource = result;
+    } else {
+      this.innerSource = this.source;
     }
-
-    @Input()
-    private dataSource: Array<any> = [];
-
-    @Input()
-    private pageable: boolean = false;
-
-    @Input()
-    private pageSizeList = [10, 20, 50];
-
-    @Input()
-    private showPageSizeList: boolean = true;
-
-    @Input()
-    private pageSize: number = 20;
-
-    @Input()
-    private serverPaging: boolean = false;
-
-    @Input()
-    private totalCount: number = 0;
-
-    @ContentChildren(TableColumnDirective)
-    private set columnTemplates(val: QueryList<TableColumnDirective>) {
-        if (val) {
-            this.columns = val.toArray();
-        }
-    }
-
-    @Output()
-    private onSorting: EventEmitter<any> = new EventEmitter();
-
-    @Output()
-    private onPaging: EventEmitter<any> = new EventEmitter();
-
-    @Output()
-    private onRowClick: EventEmitter<any> = new EventEmitter();
-
-    @Output()
-    private onPageSizeChanged: EventEmitter<any> = new EventEmitter();
-
-    constructor() { }
-
-    ngOnInit() {
-    }
-
-    ngOnChanges(changesObj: SimpleChanges) {
-        if (changesObj.dataSource) {
-            this.setDataItems();
-        }
-    }
-
-    public onPageSizeSelectChange(val: number) {
-        this.pageSize = val;
-        this.onPageSizeChanged.next(val);
-    }
-
-    public onHeaderClick(column: any) {
-        if (column.sortable) {
-            for (let c of this.columns) {
-                if (c !== column) {
-                    c.sort = '';
-                }
-            }
-            switch (column.sort) {
-                case '':
-                case 'desc':
-                    column.sort = 'asc';
-                    break;
-                case 'asc':
-                    column.sort = 'desc';
-                    break;
-            }
-            this.onSorting.next({
-                field: column.field,
-                header: column.header,
-                sort: column.sort
-            });
-            setTimeout(() => {
-                this.setDataItems();
-            });
-        }
-    }
-
-    public rowClick(rowData: any, evt: any) {
-        this.onRowClick.emit(rowData);
-    }
-
-    private setDataItems() {
-        if (!this.serverPaging && this.pageable) {
-            let result = [];
-            let startIdx = this.pageSize * (this.pageIndex - 1);
-            let endIdx = Math.min(startIdx + this.pageSize, this.dataSource.length);
-            for (let i = startIdx; i < endIdx; i++) {
-                result.push(this.dataSource[i]);
-            }
-            this.dataItems = result;
-        } else {
-            this.dataItems = this.dataSource;
-        }
-    }
+  }
 }
