@@ -1,6 +1,6 @@
 # sa-wizard
 
-## Types
+**Types**
 
 ```
 Setp: {
@@ -9,7 +9,7 @@ Setp: {
 }
 ```
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -19,12 +19,12 @@ Setp: {
 | prevText | string | | 'Prev' | 上一步按钮的文本（类型为fuelux时生效）|
 | nextText | string | | 'Next' | 下一步按钮的文本（类型为fuelux时生效）|
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

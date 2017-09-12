@@ -1,6 +1,6 @@
 # sa-widget
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -11,7 +11,7 @@
 | showPickColorBtn | boolean | | false | 是否显示选择颜色按钮 |
 | defaultColor | string | | '' | widget的默认header颜色，可选：[  'green', 'greenDark', 'greenLight',    'purple', 'magenta', 'pink',    'pinkDark', 'blueLight', 'teal',    'blue', 'blueDark', 'darken',    'yellow', 'orange', orangeDark',    'red', 'redLight', 'white'] |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
@@ -19,7 +19,7 @@
 | header | 自定义标题栏 |
 | toolbar | 自定义工具栏 |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

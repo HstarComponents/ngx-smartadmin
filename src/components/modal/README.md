@@ -1,6 +1,6 @@
 # sa-modal
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -13,7 +13,7 @@
 | draggable | boolean | | false | 是否允许弹出层可以拖拽 |
 | shown | boolean | Y | false | 控制弹出层的显示隐藏 |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
@@ -21,7 +21,7 @@
 | modal-header | 自定义弹出层Header内容 |
 | modal-footer | 自定义弹出层footer内容（设置后将无法触发ok和cancel事件） |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

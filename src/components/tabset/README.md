@@ -1,25 +1,25 @@
 # sa-tabset
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | selected | string | Y | | 当前选中的TabItem名字 |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 | '' | 放置 `sa-tab-item` |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |
 
 # sa-tab-item
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |

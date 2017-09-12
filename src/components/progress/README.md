@@ -1,6 +1,6 @@
 # sa-progress
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -16,13 +16,13 @@
 | wideBar | boolean | | false | 是否显示为较宽样式 |
 | value | number | | '' | 设置当前的进度值 |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 | '' | 设置进度条的内容 |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

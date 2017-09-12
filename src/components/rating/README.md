@@ -1,6 +1,6 @@
 # sa-rating
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -8,12 +8,12 @@
 | rateClass | string | | 'fa fa-star' | 评星的样式 |
 | ngModel | number | Y | | 双向绑定的值 |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

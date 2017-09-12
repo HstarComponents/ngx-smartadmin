@@ -1,17 +1,17 @@
 # sa-accordion
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
 
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 | '' | 放置 `sa-accordion-item` |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |
@@ -19,14 +19,14 @@
 
 # sa-accordion-item
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | header | string | | '' | 设置AccordionItem的header |
 | active | boolean | Y | true | 是否是收缩状态 |
 
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |

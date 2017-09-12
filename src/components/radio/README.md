@@ -1,6 +1,6 @@
 # sa-radio
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -9,13 +9,13 @@
 | disabled | boolean | | false | 是否禁用该按钮 |
 | name | string | | '' | 设置radio的name属性（用于分组）|
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 | '' | 设置Radio的标签文本 |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 # sa-switch
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -10,12 +10,12 @@
 | disabled | boolean | | false | 是否禁用 |
 | name | string | | '' | 设置switch控件的name |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

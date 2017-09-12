@@ -1,6 +1,6 @@
 # sa-pagination
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -10,12 +10,12 @@
 | pageSize | number | | 10 | 每页显示的记录数 |
 | ngModel | number | Y | | 当前选中的页码 |
  
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |

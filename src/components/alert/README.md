@@ -1,6 +1,6 @@
 # sa-alert
 
-## Input
+**Input**
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -9,7 +9,7 @@
 | shown | boolean | Y | true | 是否显示ALERT |
 | closable | boolean | | true | 是否可关闭（显示关闭按钮） |
 
-## Slots（ng-content占位符）
+**Slots（ng-content占位符）**
 
 | Name | Description |
 | --- | --- |
@@ -17,7 +17,7 @@
 
 
 
-## Events（Output）
+**Events（Output）**
 
 | Name | Paramters | Description |
 | --- | --- | --- |
