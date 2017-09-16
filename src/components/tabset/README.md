@@ -5,6 +5,7 @@
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | selected | string | Y | | 当前选中的TabItem名字 |
+| tabsLeft | boolean | | false | 是否将选项卡Header显示在左侧 |
  
 **Slots（ng-content占位符）**
 

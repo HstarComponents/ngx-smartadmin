@@ -1,12 +1,30 @@
 <div class="page-tabset-demo">
   当前选中项的名字：{{selected}} <button class="btn btn-primary" (click)="selected = 'tabpane-1'">设置为tabpane-1</button>
   <hr>
-  <sa-tabset [(selected)]="selected">
-    <sa-tab-item header="Tab1">
-      我是第一个Tab的内容
-    </sa-tab-item>
-    <sa-tab-item header="Tab2">
-      我的第二个Tab的内容
-    </sa-tab-item>
-  </sa-tabset>
+  <div class="col-xs-6">
+    <sa-tabset [(selected)]="selected">
+      <sa-tab-item header="Tab1">
+        我是第一个Tab的内容
+      </sa-tab-item>
+      <sa-tab-item header="Tab2">
+        我的第二个Tab的内容
+      </sa-tab-item>
+    </sa-tabset>
+  </div>
+  <div class="col-xs-6">
+    <sa-tabset [(selected)]="selected" [tabsLeft]="true">
+      <sa-tab-item header="Tab1">
+        我是第一个Tab的内容
+        <br> 我是第一个Tab的内容
+        <br> 我是第一个Tab的内容
+        <br> 我是第一个Tab的内容
+      </sa-tab-item>
+      <sa-tab-item header="Tab2">
+        我是第二个Tab的内容
+        <br> 我是第二个Tab的内容
+        <br> 我是第二个Tab的内容
+        <br> 我是第二个Tab的内容
+      </sa-tab-item>
+    </sa-tabset>
+  </div>
 </div>

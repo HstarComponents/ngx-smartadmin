@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.2.2 (2017.09.xx)
+
+- Tabset组件，新增 `tabsLeft` 模式： [tabsLeft]="true"
+
 ## v0.2.1 (2017.09.16)
 
 - 新增两个控件（Carousel，ImageZoom）

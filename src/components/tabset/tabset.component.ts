@@ -1,3 +1,5 @@
+import './tabset.component.styl';
+
 import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 import { TabItemComponent } from './tab-item.component';
@@ -12,10 +14,13 @@ export class TabsetComponent implements OnInit, AfterViewInit, OnChanges {
 
 
   @Input()
-  private selected: string;
+  public selected: string;
+
+  @Input()
+  public tabsLeft: boolean = false;
 
   @Output()
-  private selectedChange = new EventEmitter();
+  public selectedChange = new EventEmitter();
 
   constructor() { }
 
