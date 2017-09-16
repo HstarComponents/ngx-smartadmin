@@ -1,7 +1,8 @@
 import './styl/common.styl';
 
-import { ALL_PAGES, AppComponent } from './pages';
+import * as pages from './pages';
 
+import { AppComponent } from './pages';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { COMPONENTS } from './components';
@@ -18,7 +19,7 @@ import { SmartAdminModule } from '../src';
     SmartAdminModule,
     AppRoutingModule,
   ],
-  declarations: [...COMPONENTS, ...ALL_PAGES],
+  declarations: [...COMPONENTS, ...Object.values(pages)],
   providers: [/* TODO: Providers go here */],
   bootstrap: [AppComponent],
 })

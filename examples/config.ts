@@ -21,6 +21,7 @@ export const menuData: Array<MenuItem> = [
       { text: 'Carousel', url: '/carousel' },
       { text: 'Collapse Box', url: '/collapse-box' },
       { text: 'Modal', url: '/modal' },
+      { text: 'Image Zoom', url: '/image-zoom' },
       { text: 'Pagination', url: '/pagination' },
       { text: 'Progress', url: '/progress' },
       { text: 'TabSet', url: '/tabset' },

@@ -1,0 +1,7 @@
+<div class="sa-image-zoom" [ngClass]="{fullscreen: fullscreen}">
+  <ng-content></ng-content>
+  <div class="zoom-image-mask"></div>
+  <div class="zoom-image-container" [hidden]="!fullscreen">
+    <img [src]="zoomImageUrl" alt="" class="zoom-image">
+  </div>
+</div>

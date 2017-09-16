@@ -1,0 +1,41 @@
+.sa-image-zoom {
+  img {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+  }
+
+  &.fullscreen {
+    img {
+      cursor: pointer;
+      cursor: -webkit-zoom-out;
+      cursor: -moz-zoom-out;
+    }
+
+    .zoom-image-mask {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10000;
+      background: #222;
+      opacity: 0.5;
+    }
+
+    .zoom-image-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10001;
+      text-align: center;
+      padding-top: 5%;
+
+      .zoom-image {
+        height: 90%;
+      }
+    }
+  }
+}

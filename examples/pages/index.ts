@@ -7,6 +7,7 @@ import { CheckboxGroupDemoComponent } from './checkbox-group-demo/checkbox-group
 import { CollapseBoxDemoComponent } from './collapse-box-demo/collapse-box-demo.component';
 import { DemoContainerComponent } from './demo-container/demo-container.component';
 import { HomeComponent } from './home/home.component';
+import { ImageZoomDemoComponent } from './image-zoom-demo/image-zoom-demo.component';
 import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaginationDemoComponent } from './pagination-demo/pagination-demo.component';
@@ -31,6 +32,7 @@ export {
   CarouselDemoComponent,
   CollapseBoxDemoComponent,
   ModalDemoComponent,
+  ImageZoomDemoComponent,
   PaginationDemoComponent,
   ProgressDemoComponent,
   TabsetDemoComponent,
@@ -46,30 +48,3 @@ export {
   RatingDemoComponent,
   SwitchDemoComponent
 };
-
-export const ALL_PAGES = [
-  AppComponent,
-  HomeComponent,
-  NotfoundComponent,
-  DemoContainerComponent,
-
-  AccordionDemoComponent,
-  AlertDemoComponent,
-  CarouselDemoComponent,
-  CollapseBoxDemoComponent,
-  ModalDemoComponent,
-  PaginationDemoComponent,
-  ProgressDemoComponent,
-  TabsetDemoComponent,
-  WidgetDemoComponent,
-  WizardDemoComponent,
-
-  TableDemoComponent,
-
-  CheckboxDemoComponent,
-  CheckboxGroupDemoComponent,
-  RadioDemoComponent,
-  RadioGroupDemoComponent,
-  RatingDemoComponent,
-  SwitchDemoComponent
-];

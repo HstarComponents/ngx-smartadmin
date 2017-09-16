@@ -26,14 +26,15 @@ export class AppModule {
 
 - [x] Accordion [Usage](src/components/accordion/README.md)
 - [x] Alert [Usage](src/components/alert/README.md)
+- [x] Carousel [Usage](src/components/carousel/README.md)
 - [x] CollapseBox [Usage](src/components/collapse-box/README.md)
 - [x] Modal [Usage](src/components/modal/README.md)
+- [x] ImageZoom [Usage](src/components/image-zoom/README.md)
 - [x] Pagination [Usage](src/components/pagination/README.md)
 - [x] Progress [Usage](src/components/progress/README.md)
 - [x] TabSet [Usage](src/components/tabset/README.md)
 - [x] Widget [Usage](src/components/widget/README.md)
 - [x] Wizard [Usage](src/components/wizard/README.md)
-- [x] Carousel [Usage](src/components/carousel/README.md)
 
 ## Forms Elements
 

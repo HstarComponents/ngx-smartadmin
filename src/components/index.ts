@@ -6,6 +6,7 @@ import { CarouselItemComponent } from './carousel/carousel-item.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
 import { CollapseBoxComponent } from './collapse-box/collapse-box.component';
+import { ImageZoomComponent } from './image-zoom/image-zoom.component';
 import { ModalComponent } from './modal/modal.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -32,6 +33,7 @@ export const ALL_COMPONENTS = [
   CarouselComponent, CarouselItemComponent,
   CollapseBoxComponent,
   ModalComponent,
+  ImageZoomComponent,
   PaginationComponent,
   ProgressComponent,
   TableComponent, TableColumnDirective, TableCellDirective,
