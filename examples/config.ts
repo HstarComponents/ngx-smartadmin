@@ -18,6 +18,7 @@ export const menuData: Array<MenuItem> = [
     text: 'UI Elements', icon: 'fa-desktop', subMenu: [
       { text: 'Accordion', url: '/accordion' },
       { text: 'Alert', url: '/alert' },
+      { text: 'Carousel', url: '/carousel' },
       { text: 'Collapse Box', url: '/collapse-box' },
       { text: 'Modal', url: '/modal' },
       { text: 'Pagination', url: '/pagination' },

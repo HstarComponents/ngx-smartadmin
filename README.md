@@ -33,6 +33,7 @@ export class AppModule {
 - [x] TabSet [Usage](src/components/tabset/README.md)
 - [x] Widget [Usage](src/components/widget/README.md)
 - [x] Wizard [Usage](src/components/wizard/README.md)
+- [x] Carousel [Usage](src/components/carousel/README.md)
 
 ## Forms Elements
 
@@ -40,12 +41,12 @@ export class AppModule {
 - [x] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
 - [x] Radio [Usage](src/components/radio/README.md)
 - [x] RadioGroup [Usage](src/components/radio-group/README.md)
-- [ ] Rating [Usage](src/components/rating/README.md)
+- [x] Rating [Usage](src/components/rating/README.md)
 - [x] Switch [Usage](src/components/switch/README.md)
 
 ## Tables
 
-- [ ] Table [Usage](src/components/table/README.md)
+- [x] Table [Usage](src/components/table/README.md)
 
 # How to develop?
 

@@ -1,6 +1,7 @@
 import { AccordionDemoComponent } from './accordion-demo/accordion-demo.component';
 import { AlertDemoComponent } from './alert-demo/alert-demo.component';
 import { AppComponent } from './app/app.component';
+import { CarouselDemoComponent } from './carousel-demo/carousel-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { CheckboxGroupDemoComponent } from './checkbox-group-demo/checkbox-group-demo.component';
 import { CollapseBoxDemoComponent } from './collapse-box-demo/collapse-box-demo.component';
@@ -27,6 +28,7 @@ export {
 
   AccordionDemoComponent,
   AlertDemoComponent,
+  CarouselDemoComponent,
   CollapseBoxDemoComponent,
   ModalDemoComponent,
   PaginationDemoComponent,
@@ -53,6 +55,7 @@ export const ALL_PAGES = [
 
   AccordionDemoComponent,
   AlertDemoComponent,
+  CarouselDemoComponent,
   CollapseBoxDemoComponent,
   ModalDemoComponent,
   PaginationDemoComponent,

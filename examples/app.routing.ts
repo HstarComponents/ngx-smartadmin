@@ -1,6 +1,7 @@
 import {
   AccordionDemoComponent,
   AlertDemoComponent,
+  CarouselDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
   CollapseBoxDemoComponent,
@@ -27,6 +28,7 @@ const demoRoutes: Routes = [
   { path: 'accordion', component: AccordionDemoComponent },
   { path: 'alert', component: AlertDemoComponent },
   { path: 'collapse-box', component: CollapseBoxDemoComponent },
+  { path: 'carousel', component: CarouselDemoComponent },
   { path: 'modal', component: ModalDemoComponent },
   { path: 'pagination', component: PaginationDemoComponent },
   { path: 'progress', component: ProgressDemoComponent },

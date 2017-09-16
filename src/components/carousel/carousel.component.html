@@ -1,0 +1,10 @@
+<div class="sa-carousel carousel" [ngClass]="animateType" (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()">
+  <ol class="carousel-indicators">
+    <li *ngFor="let item of items;let idx = index" [ngClass]="{active: idx === innerIndex}" (click)="slide(idx)"></li>
+  </ol>
+  <div class="carousel-inner">
+    <ng-content></ng-content>
+  </div>
+  <a class="left carousel-control" href="javascript:;" (click)="prev()"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+  <a class="right carousel-control" href="javascript:;" (click)="next()"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+</div>
