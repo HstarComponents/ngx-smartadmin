@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.2.1 (2017.09.16)
+
+- 新增两个控件（Carousel，ImageZoom）
+- 优化组件引用代码
+
 ## v0.2.0 (2017.09.12)
 
 - 新增多种表单控件
