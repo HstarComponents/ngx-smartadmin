@@ -24,8 +24,8 @@ export class AppModule {
 
 ## Layout
 
-- [ ] Row [Usage](src/components/row/README.md)
-- [ ] Col [Usage](src/components/col/README.md)
+- [x] Row [Usage](src/components/row/README.md)
+- [x] Col [Usage](src/components/col/README.md)
 
 ## UI Elements
 

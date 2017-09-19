@@ -1,0 +1,209 @@
+<div class="page-layout-demo">
+  <sa-collapse-box header="基本布局">
+    <sa-row>
+      <sa-col [span]="24">
+        <div class="grid-content bg-purple-dark"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row>
+      <sa-col [span]="12">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="12">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row>
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+  <sa-collapse-box header="分栏间隔">
+    <sa-row [gutter]="20">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+  <sa-collapse-box header="混合布局">
+    <sa-row [gutter]="20">
+      <sa-col [span]="16">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row [gutter]="20">
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="8">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row [gutter]="20">
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="16">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="4">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+  <sa-collapse-box header="分栏偏移">
+    <sa-row [gutter]="20">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6" :offset="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row [gutter]="20">
+      <sa-col [span]="6" :offset="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6" :offset="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row [gutter]="20">
+      <sa-col [span]="12" :offset="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+  <sa-collapse-box header="对齐方式">
+    <sa-row type="flex" class="row-bg">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row type="flex" class="row-bg" justify="center">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row type="flex" class="row-bg" justify="end">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row type="flex" class="row-bg" justify="space-between">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+    <sa-row type="flex" class="row-bg" justify="space-around">
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col [span]="6">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+  <sa-collapse-box header="响应式布局">
+    <sa-row [gutter]="10">
+      <sa-col :xs="8" [sm]="6" [md]="4" [lg]="3">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col :xs="4" [sm]="6" [md]="8" [lg]="9">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+      <sa-col :xs="4" [sm]="6" [md]="8" [lg]="9">
+        <div class="grid-content bg-purple"></div>
+      </sa-col>
+      <sa-col :xs="8" [sm]="6" [md]="4" [lg]="3">
+        <div class="grid-content bg-purple-light"></div>
+      </sa-col>
+    </sa-row>
+  </sa-collapse-box>
+</div>

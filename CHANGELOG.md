@@ -1,9 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## v0.2.2 (2017.09.xx)
+## v0.3.0 (2017.09.xx)
 
 - Tabset组件，新增 `tabsLeft` 模式： [tabsLeft]="true"
+- 增加24列布局组件 `sa-row`, `sa-col`
 
 ## v0.2.1 (2017.09.16)
 

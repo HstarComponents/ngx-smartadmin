@@ -1,0 +1,52 @@
+.sa-row {
+  position: relative;
+  box-sizing: border-box;
+
+  &::before, &::after {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  &.sa-row--flex {
+    display: -ms-flexbox;
+    display: flex;
+
+    &::before, &::after {
+      display: none;
+    }
+
+    &.is-align-middle {
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    &.is-align-bottom {
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+    }
+
+    &.is-justify-space-around {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
+
+    &.is-justify-space-between {
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    &.is-justify-end {
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+
+    &.is-justify-center {
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+}

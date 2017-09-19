@@ -5,6 +5,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
+import { ColComponent } from './col/col.component';
 import { CollapseBoxComponent } from './collapse-box/collapse-box.component';
 import { ImageZoomComponent } from './image-zoom/image-zoom.component';
 import { ModalComponent } from './modal/modal.component';
@@ -13,6 +14,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { RatingComponent } from './rating/rating.component';
+import { RowComponent } from './row/row.component';
 import { SwitchComponent } from './switch/switch.component';
 import { TabItemComponent } from './tabset/tab-item.component';
 import { TableCellDirective } from './table/column-cell.directive';
@@ -23,11 +25,17 @@ import { WidgetComponent } from './widget/widget.component';
 import { WizardComponent } from './wizard/wizard.component';
 
 export const ALL_COMPONENTS = [
+  // 表单组件
   CheckboxComponent, CheckboxGroupComponent,
   RadioComponent, RadioGroupComponent,
   RatingComponent,
   SwitchComponent,
 
+  // 布局组件
+  RowComponent,
+  ColComponent,
+
+  // UI元素组件
   AccordionComponent, AccordionItemComponent,
   AlertComponent,
   CarouselComponent, CarouselItemComponent,
@@ -36,8 +44,10 @@ export const ALL_COMPONENTS = [
   ImageZoomComponent,
   PaginationComponent,
   ProgressComponent,
-  TableComponent, TableColumnDirective, TableCellDirective,
   TabsetComponent, TabItemComponent,
   WidgetComponent,
-  WizardComponent
+  WizardComponent,
+
+  // 数据组件
+  TableComponent, TableColumnDirective, TableCellDirective
 ];

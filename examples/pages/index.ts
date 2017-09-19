@@ -8,6 +8,7 @@ import { CollapseBoxDemoComponent } from './collapse-box-demo/collapse-box-demo.
 import { DemoContainerComponent } from './demo-container/demo-container.component';
 import { HomeComponent } from './home/home.component';
 import { ImageZoomDemoComponent } from './image-zoom-demo/image-zoom-demo.component';
+import { LayoutDemoComponent } from './layout-demo/layout-demo.component';
 import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaginationDemoComponent } from './pagination-demo/pagination-demo.component';
@@ -26,6 +27,8 @@ export {
   HomeComponent,
   NotfoundComponent,
   DemoContainerComponent,
+
+  LayoutDemoComponent,
 
   AccordionDemoComponent,
   AlertDemoComponent,

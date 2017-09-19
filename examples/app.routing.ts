@@ -8,6 +8,7 @@ import {
   DemoContainerComponent,
   HomeComponent,
   ImageZoomDemoComponent,
+  LayoutDemoComponent,
   ModalDemoComponent,
   NotfoundComponent,
   PaginationDemoComponent,
@@ -37,6 +38,9 @@ const demoRoutes: Routes = [
   { path: 'tabset', component: TabsetDemoComponent },
   { path: 'widget', component: WidgetDemoComponent },
   { path: 'wizard', component: WizardDemoComponent },
+
+  { path: 'row', component: LayoutDemoComponent },
+  { path: 'col', component: LayoutDemoComponent },
 
   { path: 'table', component: TableDemoComponent },
 

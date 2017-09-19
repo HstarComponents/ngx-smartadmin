@@ -1,0 +1,49 @@
+.sa-col-0 {
+  width: 0;
+}
+
+for i in 1 .. 24 {
+  .sa-col-{i} {
+    float: left;
+    box-sizing: border-box;
+  }
+}
+
+loopColStyle(size)
+  $base = 1 / 24 * 100;
+
+  for i in 1 .. 24 {
+    .sa-col{size}-{i} {
+      width: ($base * i)%;
+    }
+    
+    .sa-col{size}-offset-{i} {
+      margin-left: ($base * i)%;
+    }
+
+    .sa-col{size}-pull-{i} {
+      position: relative;
+      right: ($base * i)%;
+    }
+
+    .sa-col{size}-push-{i} {
+      position: relative;
+      left: ($base * i)%;
+    }
+  }
+loopColStyle('')
+@media (max-width: 768px) {
+  loopColStyle('-xs')
+}
+
+@media (min-width: 768px) {
+  loopColStyle('-sm')
+}
+
+@media (min-width: 992px) {
+  loopColStyle('-md')
+}
+
+@media (min-width: 1200px) {
+  loopColStyle('-lg')
+}

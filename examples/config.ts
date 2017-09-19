@@ -1,6 +1,12 @@
 export const menuData: Array<MenuItem> = [
   {
-    text: 'Tables', active: false, open: false, icon: 'fa-table', subMenu: [
+    text: 'Layout', icon: 'fa-list', subMenu: [
+      { text: 'Row', url: '/row' },
+      { text: 'Col', url: '/col' }
+    ]
+  },
+  {
+    text: 'Tables', icon: 'fa-table', subMenu: [
       { text: 'Table', url: '/table' }
     ]
   },
