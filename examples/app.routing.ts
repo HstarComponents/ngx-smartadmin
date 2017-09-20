@@ -1,6 +1,7 @@
 import {
   AccordionDemoComponent,
   AlertDemoComponent,
+  AutocompleteDemoComponent,
   CarouselDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
@@ -8,6 +9,8 @@ import {
   DemoContainerComponent,
   HomeComponent,
   ImageZoomDemoComponent,
+  InputDemoComponent,
+  InputGroupDemoComponent,
   LayoutDemoComponent,
   ModalDemoComponent,
   NotfoundComponent,
@@ -16,6 +19,7 @@ import {
   RadioDemoComponent,
   RadioGroupDemoComponent,
   RatingDemoComponent,
+  SelectDemoComponent,
   SwitchDemoComponent,
   TableDemoComponent,
   TabsetDemoComponent,
@@ -27,6 +31,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const demoRoutes: Routes = [
+  // UI Elements
   { path: 'accordion', component: AccordionDemoComponent },
   { path: 'alert', component: AlertDemoComponent },
   { path: 'collapse-box', component: CollapseBoxDemoComponent },
@@ -39,16 +44,23 @@ const demoRoutes: Routes = [
   { path: 'widget', component: WidgetDemoComponent },
   { path: 'wizard', component: WizardDemoComponent },
 
+  // Layout
   { path: 'row', component: LayoutDemoComponent },
   { path: 'col', component: LayoutDemoComponent },
 
+  // Data
   { path: 'table', component: TableDemoComponent },
 
+  // Form Elements
+  { path: 'autocomplete', component: AutocompleteDemoComponent },
   { path: 'checkbox', component: CheckboxDemoComponent },
   { path: 'checkbox-group', component: CheckboxGroupDemoComponent },
+  { path: 'input', component: InputDemoComponent },
+  { path: 'input-group', component: InputGroupDemoComponent },
   { path: 'radio', component: RadioDemoComponent },
   { path: 'radio-group', component: RadioGroupDemoComponent },
   { path: 'rating', component: RatingDemoComponent },
+  { path: 'select', component: SelectDemoComponent },
   { path: 'switch', component: SwitchDemoComponent }
 ];
 

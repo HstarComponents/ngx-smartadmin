@@ -14,9 +14,11 @@ export const menuData: Array<MenuItem> = [
     text: 'Forms', icon: 'fa-pencil-square-o', subMenu: [
       { text: 'Check Box', url: '/checkbox' },
       { text: 'Check Box Group', url: '/checkbox-group' },
+      { text: 'Input', url: '/input' },
       { text: 'Radio', url: '/radio' },
       { text: 'Radio Group', url: '/radio-group' },
       { text: 'Rating', url: '/rating' },
+      { text: 'Select', url: '/select' },
       { text: 'Switch', url: '/switch' }
     ]
   },
