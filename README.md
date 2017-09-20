@@ -48,7 +48,7 @@ export class AppModule {
 - [x] CheckBox [Usage](src/components/checkbox/README.md)
 - [x] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
 - [x] Input [Usage](src/components/autocomplete/README.md)
-- [ ] InputGroup [Usage](src/components/input-group/README.md)
+- [x] InputGroup [Usage](src/components/input-group/README.md)
 - [x] Radio [Usage](src/components/radio/README.md)
 - [x] RadioGroup [Usage](src/components/radio-group/README.md)
 - [x] Rating [Usage](src/components/rating/README.md)
