@@ -1,1 +1,46 @@
-<div class="input-group-demo"> Hello InputGroupDemoComponent! </div>
+<div class="page-input-group-demo">
+  <sa-row [gutter]="20">
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+        <span slot="addon-prepend">Http://</span>
+      </sa-input-group>
+    </sa-col>
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+        <span slot="addon-append">.com</span>
+      </sa-input-group>
+    </sa-col>
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+        <span slot="addon-prepend">请选择</span>
+        <span slot="addon-append">
+            <i class="fa fa-search"></i>
+          </span>
+      </sa-input-group>
+    </sa-col>
+  </sa-row>
+  <br>
+  <sa-row [gutter]="20">
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+      </sa-input-group>
+    </sa-col>
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+        <button slot="btn-prepend" class="btn btn-default">
+          开始
+        </button>
+        <button slot="btn-append" class="btn btn-default">
+          结束
+        </button>
+      </sa-input-group>
+    </sa-col>
+    <sa-col [span]="8">
+      <sa-input-group [(ngModel)]="value" placeholder="请输入内容">
+        <button slot="btn-append" class="btn btn-default">
+          <i class="fa fa-search"></i>
+        </button>
+      </sa-input-group>
+    </sa-col>
+  </sa-row>
+</div>

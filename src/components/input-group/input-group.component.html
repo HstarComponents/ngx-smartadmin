@@ -1,1 +1,18 @@
-<div class="input-group"> Hello InputGroupComponent! </div>
+<div class="sa-input-group input-group">
+  <span class="input-group-addon" #addonPrepend [hidden]="!hasPrependAddon">
+    <ng-content select="[slot=addon-prepend]"></ng-content>
+  </span>
+  <span class="input-group-btn" #btnPrepend [hidden]="!hasPrependBtn">
+    <ng-content select="[slot=btn-prepend]"></ng-content>
+  </span>
+  <input *ngIf="!isTextarea" [type]="type" [ngModel]="innerValue" (ngModelChange)="handleModelChange($event)" class="form-control"
+    [placeholder]="placeholder" [disabled]="disabled">
+  <textarea *ngIf="isTextarea" class="form-control" [ngModel]="innerValue" (ngModelChange)="handleModelChange($event)" [rows]="rows"
+    [placeholder]="placeholder" [disabled]="disabled"></textarea>
+  <span class="input-group-addon" #addonAppend [hidden]="!hasAppendAddon">
+    <ng-content select="[slot=addon-append]"></ng-content>
+  </span>
+  <span class="input-group-btn" #btnAppend [hidden]="!hasAppendBtn">
+    <ng-content select="[slot=btn-append]"></ng-content>
+  </span>
+</div>

@@ -27,7 +27,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   }
 
   @Input()
-  public placeholder: string;
+  public placeholder: string = '';
 
   @Input()
   public rows: number = 3;

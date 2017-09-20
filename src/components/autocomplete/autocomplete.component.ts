@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'autocomplete',
+	selector: 'sa-autocomplete',
 	templateUrl: 'autocomplete.component.html'
 })
 

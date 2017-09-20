@@ -15,52 +15,6 @@
       </sa-input>
     </sa-col>
   </sa-row>
-  <sa-input type="textarea" :rows="5" placeholder="请输入内容" [(ngModel)]="value">
+  <sa-input type="textarea" :rows="5" [(ngModel)]="value">
   </sa-input>
-  <hr>
-  <div>
-    <sa-input placeholder="请输入内容">
-      <span slot="addon">11</span>
-      <span slot="addon">22</span>
-    </sa-input>
-  </div>
-  <div style="margin-top: 15px;">
-    <sa-input placeholder="请输入内容" v-model="input4">
-      <template slot="append">.com</template>
-    </sa-input>
-  </div>
-  <div style="margin-top: 15px;">
-    <sa-input placeholder="请输入内容" v-model="input5">
-      <!-- <sa-select v-model="select" slot="prepend" placeholder="请选择">
-        <sa-option label="餐厅名" value="1"></sa-option>
-        <sa-option label="订单号" value="2"></sa-option>
-        <sa-option label="用户电话" value="3"></sa-option>
-      </sa-select> -->
-      <!-- <sa-button slot="append" icon="search"></sa-button> -->
-    </sa-input>
-  </div>
-  <hr>
-  <!-- <sa-row class="demo-autocomplete">
-        <sa-col :span="12">
-          <div class="sub-title">激活即列出输入建议</div>
-          <sa-autocomplete
-            class="inline-input"
-            v-model="state1"
-            :fetch-suggestions="querySearch"
-            placeholder="请输入内容"
-            @select="handleSelect"
-          ></sa-autocomplete>
-        </sa-col>
-        <sa-col :span="12">
-          <div class="sub-title">输入后匹配输入建议</div>
-          <sa-autocomplete
-            class="inline-input"
-            v-model="state2"
-            :fetch-suggestions="querySearch"
-            placeholder="请输入内容"
-            :trigger-on-focus="false"
-            @select="handleSelect"
-          ></sa-autocomplete>
-        </sa-col>
-      </sa-row> -->
 </div>
