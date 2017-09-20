@@ -1,3 +1,5 @@
+import './MessageBox.styl';
+
 import { Injectable } from '@angular/core';
 
 @Injectable()

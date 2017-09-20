@@ -10,5 +10,6 @@ interface MenuItem {
 
 declare var AppConf: {
   menuData: Array<MenuItem>,
+  serviceList: string[],
   rootHost: string
 }

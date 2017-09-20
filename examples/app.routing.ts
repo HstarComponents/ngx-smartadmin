@@ -12,6 +12,7 @@ import {
   InputDemoComponent,
   InputGroupDemoComponent,
   LayoutDemoComponent,
+  MessageboxDemoComponent,
   ModalDemoComponent,
   NotfoundComponent,
   PaginationDemoComponent,
@@ -61,7 +62,10 @@ const demoRoutes: Routes = [
   { path: 'radio-group', component: RadioGroupDemoComponent },
   { path: 'rating', component: RatingDemoComponent },
   { path: 'select', component: SelectDemoComponent },
-  { path: 'switch', component: SwitchDemoComponent }
+  { path: 'switch', component: SwitchDemoComponent },
+
+  // Services
+  { path: 'message-box', component: MessageboxDemoComponent }
 ];
 
 const routes: Routes = [

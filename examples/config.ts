@@ -38,10 +38,15 @@ export const menuData: Array<MenuItem> = [
       { text: 'Widget', url: '/widget' },
       { text: 'Wizard', url: '/wizard' }
     ]
+  }, {
+    text: 'Services', icon: 'fa-star', subMenu: [
+      { text: 'MessageBox', url: '/message-box' }
+    ]
   }
 ];
 
 window['AppConf'] = {
   menuData,
+  serviceList: ['message-box'],
   rootHost: process.env.NODE_ENV === 'production' ? 'https://raw.githubusercontent.com/HstarComponents/ngx-smartadmin/master' : 'http://localhost:7777'
 };

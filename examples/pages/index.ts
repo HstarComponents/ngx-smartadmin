@@ -12,6 +12,7 @@ import { ImageZoomDemoComponent } from './image-zoom-demo/image-zoom-demo.compon
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { InputGroupDemoComponent } from './input-group-demo/input-group-demo.component';
 import { LayoutDemoComponent } from './layout-demo/layout-demo.component';
+import { MessageboxDemoComponent } from './messagebox-demo/messagebox-demo.component';
 import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaginationDemoComponent } from './pagination-demo/pagination-demo.component';
@@ -61,5 +62,8 @@ export {
   RadioDemoComponent,
   RadioGroupDemoComponent,
   RatingDemoComponent,
-  SwitchDemoComponent
+  SwitchDemoComponent,
+
+  // Services
+  MessageboxDemoComponent
 };

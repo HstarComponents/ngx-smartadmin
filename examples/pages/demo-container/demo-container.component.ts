@@ -13,6 +13,7 @@ import { Http } from '@angular/http';
 export class DemoContainerComponent implements OnInit {
 
   public componentDocument: string = '';
+  public isService: boolean = false;
 
   constructor(private router: Router, private http: Http) {
     this.router.events.subscribe(evt => {
@@ -29,7 +30,8 @@ export class DemoContainerComponent implements OnInit {
     if (!componentName) {
       return;
     }
-    this.http.get(`${AppConf.rootHost}/src/components/${componentName}/README.md`)
+    this.isService = AppConf.serviceList.includes(componentName);
+    this.http.get(`${AppConf.rootHost}/src/${this.isService ? 'services' : 'components'}/${componentName}/README.md`)
       .subscribe(res => {
         this.componentDocument = res.text();
       });
