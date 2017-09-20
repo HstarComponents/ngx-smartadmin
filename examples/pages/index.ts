@@ -67,3 +67,44 @@ export {
   // Services
   MessageboxDemoComponent
 };
+
+export const PAGE_COMPONENTS = [
+  AppComponent,
+  HomeComponent,
+  NotfoundComponent,
+  DemoContainerComponent,
+
+  // Layout  
+  LayoutDemoComponent,
+
+  // UI Elements
+  AccordionDemoComponent,
+  AlertDemoComponent,
+  CarouselDemoComponent,
+  CollapseBoxDemoComponent,
+  ModalDemoComponent,
+  ImageZoomDemoComponent,
+  PaginationDemoComponent,
+  ProgressDemoComponent,
+  SelectDemoComponent,
+  TabsetDemoComponent,
+  WidgetDemoComponent,
+  WizardDemoComponent,
+
+  // Data
+  TableDemoComponent,
+
+  // 表单
+  AutocompleteDemoComponent,
+  CheckboxDemoComponent,
+  CheckboxGroupDemoComponent,
+  InputDemoComponent,
+  InputGroupDemoComponent,
+  RadioDemoComponent,
+  RadioGroupDemoComponent,
+  RatingDemoComponent,
+  SwitchDemoComponent,
+
+  // Services
+  MessageboxDemoComponent
+];

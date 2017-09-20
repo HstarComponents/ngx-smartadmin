@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'form-item',
+	selector: 'sa-form-item',
 	templateUrl: 'form-item.component.html'
 })
 

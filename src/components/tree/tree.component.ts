@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'tree',
+	selector: 'sa-tree',
 	templateUrl: 'tree.component.html'
 })
 

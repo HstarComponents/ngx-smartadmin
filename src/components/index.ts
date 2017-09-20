@@ -4,10 +4,13 @@ import { AlertComponent } from './alert/alert.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item.component';
+import { CascaderComponent } from './cascader/cascader.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
 import { ColComponent } from './col/col.component';
 import { CollapseBoxComponent } from './collapse-box/collapse-box.component';
+import { FormComponent } from './form/form.component';
+import { FormItemComponent } from './form/form-item.component';
 import { ImageZoomComponent } from './image-zoom/image-zoom.component';
 import { InputComponent } from './input/input.component';
 import { InputGroupComponent } from './input-group/input-group.component';
@@ -25,13 +28,16 @@ import { TableCellDirective } from './table/column-cell.directive';
 import { TableColumnDirective } from './table/table-column.directive';
 import { TableComponent } from './table/table.component';
 import { TabsetComponent } from './tabset/tabset.component';
+import { TreeComponent } from './tree/tree.component';
 import { WidgetComponent } from './widget/widget.component';
 import { WizardComponent } from './wizard/wizard.component';
 
 export const ALL_COMPONENTS = [
   // 表单组件
   AutocompleteComponent,
+  CascaderComponent,
   CheckboxComponent, CheckboxGroupComponent,
+  FormComponent, FormItemComponent,
   InputComponent,
   InputGroupComponent,
   RadioComponent, RadioGroupComponent,
@@ -57,5 +63,6 @@ export const ALL_COMPONENTS = [
   WizardComponent,
 
   // 数据组件
-  TableComponent, TableColumnDirective, TableCellDirective
+  TableComponent, TableColumnDirective, TableCellDirective,
+  TreeComponent
 ];

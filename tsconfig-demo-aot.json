@@ -14,7 +14,7 @@
     ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "aot/lib",
+    "outDir": "aot",
     "declaration": true,
     "typeRoots": [
       "./node_modules/@types/"
