@@ -1,0 +1,9 @@
+<label [ngClass]="{input: !isTextarea, textarea: isTextarea}">
+  <i *ngIf="icon" [ngClass]="[iconClass, icon]" (click)="handleIconClick($event)"></i>
+  <input *ngIf="!isTextarea" [type]="type" [ngModel]="innerValue" (ngModelChange)="handleModelChange($event)" class="sa-input form-control" [placeholder]="placeholder" [disabled]="disabled">
+  <textarea *ngIf="isTextarea"  class="sa-input form-control" [ngModel]="innerValue" (ngModelChange)="handleModelChange($event)" [rows]="rows" [disabled]="disabled"></textarea>
+  <b class="tooltip" [ngClass]="tooltipPositionClass" *ngIf="tooltip">
+    <i class="fa fa-warning txt-color-teal"></i> 
+    {{tooltip}}
+  </b> 
+</label>
