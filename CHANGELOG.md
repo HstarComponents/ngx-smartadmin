@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - Tabset组件，新增 `tabsLeft` 模式： [tabsLeft]="true"
 - 增加24列布局组件 `sa-row`, `sa-col`
 - 增加更多表单组件（Input, InputGroup）
+- 修复AOT编译Demo
 
 ## v0.2.1 (2017.09.16)
 
