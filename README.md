@@ -31,6 +31,7 @@ export class AppModule {
 
 - [x] Accordion [Usage](src/components/accordion/README.md)
 - [x] Alert [Usage](src/components/alert/README.md)
+- [x] Button [Usage](src/components/button/README.md)
 - [x] Carousel [Usage](src/components/carousel/README.md)
 - [x] CollapseBox [Usage](src/components/collapse-box/README.md)
 - [x] Modal [Usage](src/components/modal/README.md)

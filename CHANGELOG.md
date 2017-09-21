@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.3.x (2017.09.x)
+
+- 新增 `sa-button` 组件
+
 ## v0.3.0 (2017.09.20)
 
 - Tabset组件，新增 `tabsLeft` 模式： [tabsLeft]="true"
