@@ -2,6 +2,7 @@ import {
   AccordionDemoComponent,
   AlertDemoComponent,
   AutocompleteDemoComponent,
+  ButtonDemoComponent,
   CarouselDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
@@ -35,6 +36,7 @@ const demoRoutes: Routes = [
   // UI Elements
   { path: 'accordion', component: AccordionDemoComponent },
   { path: 'alert', component: AlertDemoComponent },
+  { path: 'button', component: ButtonDemoComponent },
   { path: 'collapse-box', component: CollapseBoxDemoComponent },
   { path: 'carousel', component: CarouselDemoComponent },
   { path: 'modal', component: ModalDemoComponent },

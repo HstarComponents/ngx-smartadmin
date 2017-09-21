@@ -2,6 +2,7 @@ import { AccordionDemoComponent } from './accordion-demo/accordion-demo.componen
 import { AlertDemoComponent } from './alert-demo/alert-demo.component';
 import { AppComponent } from './app/app.component';
 import { AutocompleteDemoComponent } from './autocomplete-demo/autocomplete-demo.component';
+import { ButtonDemoComponent } from './button-demo/button-demo.component';
 import { CarouselDemoComponent } from './carousel-demo/carousel-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { CheckboxGroupDemoComponent } from './checkbox-group-demo/checkbox-group-demo.component';
@@ -39,6 +40,7 @@ export {
   // UI Elements
   AccordionDemoComponent,
   AlertDemoComponent,
+  ButtonDemoComponent,
   CarouselDemoComponent,
   CollapseBoxDemoComponent,
   ModalDemoComponent,
@@ -80,6 +82,7 @@ export const PAGE_COMPONENTS = [
   // UI Elements
   AccordionDemoComponent,
   AlertDemoComponent,
+  ButtonDemoComponent,
   CarouselDemoComponent,
   CollapseBoxDemoComponent,
   ModalDemoComponent,

@@ -15,8 +15,6 @@
 | --- | --- |
 | '' | 设置Alert的主内容 |
 
-
-
 **Events（Output）**
 
 | Name | Paramters | Description |

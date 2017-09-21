@@ -1,0 +1,4 @@
+<button class="sa-button btn" [ngClass]="btnClass" (click)="handleClick($event)">
+  <i *ngIf="!!icon" [ngClass]="icon"></i> 
+  <ng-content></ng-content>
+</button>

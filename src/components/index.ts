@@ -2,6 +2,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion/accordion-item.component';
 import { AlertComponent } from './alert/alert.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { ButtonComponent } from './button/button.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item.component';
 import { CascaderComponent } from './cascader/cascader.component';
@@ -52,6 +53,7 @@ export const ALL_COMPONENTS = [
   // UI元素组件
   AccordionComponent, AccordionItemComponent,
   AlertComponent,
+  ButtonComponent,
   CarouselComponent, CarouselItemComponent,
   CollapseBoxComponent,
   ModalComponent,
