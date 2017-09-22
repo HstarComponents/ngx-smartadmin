@@ -64,7 +64,7 @@ export class AppModule {
 
 # Services
 
-- [ ] MessageBox [Usage](src/services/message-box/README.md)
+- [x] MessageBox [Usage](src/services/message-box/README.md)
 - [ ] Loading [Usage](src/services/loading/README.md)
 - [ ] NotifyBox [Usage](src/services/notify-box/README.md)
 

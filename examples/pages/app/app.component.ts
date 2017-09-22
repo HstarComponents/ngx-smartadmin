@@ -3,6 +3,8 @@ import './app.component.styl';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
+import { version } from '../../../src';
+
 @Component({
   selector: 'app',
   templateUrl: 'app.component.html'
@@ -14,9 +16,10 @@ export class AppComponent implements OnInit {
 
   public menuData: Array<MenuItem> = [];
   public isFullScreen: boolean = false;
+  public smartAdminVersion: string = '';
 
   constructor(private router: Router) {
-
+    this.smartAdminVersion = version;
   }
 
   ngOnInit() {
