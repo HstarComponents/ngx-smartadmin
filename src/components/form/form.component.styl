@@ -1,0 +1,21 @@
+$no-padding-lr {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.sa-form {
+  .form-group {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    .control-label {
+      float: left;
+      @extend $no-padding-lr;
+    }
+
+    .sa-form-item-content {
+      position: relative;
+      @extend $no-padding-lr;
+    }
+  }
+}

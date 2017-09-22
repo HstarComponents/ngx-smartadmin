@@ -1,1 +1,3 @@
-<div class="form"> Hello FormComponent! </div>
+<form class="sa-form" [ngClass]="{'form-horizontal': inline, 'smart-form': !inline}">
+  <ng-content></ng-content>
+</form>

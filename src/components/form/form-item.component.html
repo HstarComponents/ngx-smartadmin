@@ -1,1 +1,6 @@
-<div class="form-item"> Hello FormItemComponent! </div>
+<div class="sa-form-item" [ngClass]="{'form-group': inline}">
+  <label [ngClass]="labelClass" [ngStyle]="labelStyle">{{label}}</label>
+  <div [ngClass]="{'col-xs-1 sa-form-item-content': inline}" [ngStyle]="contentStyle">
+    <ng-content></ng-content>
+  </div>
+</div>

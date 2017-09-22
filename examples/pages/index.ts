@@ -8,6 +8,7 @@ import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { CheckboxGroupDemoComponent } from './checkbox-group-demo/checkbox-group-demo.component';
 import { CollapseBoxDemoComponent } from './collapse-box-demo/collapse-box-demo.component';
 import { DemoContainerComponent } from './demo-container/demo-container.component';
+import { FormDemoComponent } from './form-demo/form-demo.component';
 import { HomeComponent } from './home/home.component';
 import { ImageZoomDemoComponent } from './image-zoom-demo/image-zoom-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
@@ -59,6 +60,7 @@ export {
   AutocompleteDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
+  FormDemoComponent,
   InputDemoComponent,
   InputGroupDemoComponent,
   RadioDemoComponent,
@@ -101,6 +103,7 @@ export const PAGE_COMPONENTS = [
   AutocompleteDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
+  FormDemoComponent,
   InputDemoComponent,
   InputGroupDemoComponent,
   RadioDemoComponent,

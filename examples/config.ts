@@ -15,6 +15,7 @@ export const menuData: Array<MenuItem> = [
       { text: 'Autocomplete', url: '/autocomplete' },
       { text: 'Check Box', url: '/checkbox' },
       { text: 'Check Box Group', url: '/checkbox-group' },
+      { text: 'Form', url: '/form' },
       { text: 'Input', url: '/input' },
       { text: 'Input Group', url: '/input-group' },
       { text: 'Radio', url: '/radio' },

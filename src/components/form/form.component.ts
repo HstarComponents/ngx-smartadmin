@@ -1,11 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import './form.component.styl';
+
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-	selector: 'sa-form',
-	templateUrl: 'form.component.html'
+  selector: 'sa-form',
+  templateUrl: 'form.component.html'
 })
 
 export class FormComponent implements OnInit {
 
-	ngOnInit() { }
+  @Input()
+  public inline: boolean = false;
+
+  @Input()
+  public labelWidth: string = '';
+
+  @Input()
+  public labelPosition: string = 'right';
+
+  ngOnInit() { }
 }

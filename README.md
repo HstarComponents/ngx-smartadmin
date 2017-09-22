@@ -44,7 +44,7 @@ export class AppModule {
 
 ## Forms Elements
 
-- [ ] Form [Usage](src/components/form/README.md)
+- [x] Form [Usage](src/components/form/README.md)
 - [ ] Autocomplete [Usage](src/components/autocomplete/README.md)
 - [x] CheckBox [Usage](src/components/checkbox/README.md)
 - [x] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
