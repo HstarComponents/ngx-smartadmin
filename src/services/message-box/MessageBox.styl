@@ -1,18 +1,36 @@
 .sa-message {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  min-width: 300px;
-  padding: 10px 12px;
-  box-sizing: border-box;
-  border-radius: 2px;
-  position: fixed;
-  left: 50%;
-  top: 20px;
-  transform: translateX(-50%);
-  background-color: #fff;
-  transition: opacity 0.3s, transform 0.4s;
-  overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);
+    min-width: 300px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: opacity .3s,transform .4s;
+    overflow: hidden
+}
 
-  .samessage-group {
+.sa-message .sa-icon-circle-check {
+    color: #13ce66
+}
+
+.sa-message .sa-icon-circle-cross {
+    color: #ff4949
+}
+
+.sa-message .sa-icon-information {
+    color: #50bfff
+}
+
+.sa-message .sa-icon-warning {
+    color: #f7ba2a
+}
+
+.sa-message__group {
     margin-left: 38px;
     position: relative;
     height: 20px;
@@ -20,49 +38,52 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: center
+}
 
-    &.is-with-icon {
-      margin-left: 0;
-    }
+.sa-message__group p {
+    font-size: 14px;
+    margin: 0 34px 0 0;
+    color: #8391a5;
+    text-align: justify
+}
 
-    p {
-      font-size: 14px;
-      margin: 0 34px 0 0;
-      white-space: nowrap;
-      color: #8391a5;
-      text-align: justify;
-    }
-  }
+.sa-step__head,.sa-steps.is-horizontal.is-center {
+    text-align: center
+}
 
-  .message-img {
+.sa-message__group.is-with-icon {
+    margin-left: 0
+}
+
+.sa-message__img {
     width: 40px;
     height: 40px;
     position: absolute;
     left: 0;
-    top: 0;
-  }
+    top: 0
+}
 
-  .message-icon {
+.sa-message__icon {
     vertical-align: middle;
-    margin-right: 8px;
-  }
+    margin-right: 8px
+}
 
-  .message-close-btn {
+.sa-message__closeBtn {
     top: 3px;
     right: 0;
     position: absolute;
     cursor: pointer;
     color: #bfcbd9;
-    font-size: 14px;
+    font-size: 14px
+}
 
-    &:hover {
-      color: #97a8be;
-    }
-  }
+.sa-message__closeBtn:hover {
+    color: #97a8be
+}
 
-  &.sa-message-fade-enter, &.sa-message-fade-leave-active {
+.sa-message-fade-enter,.sa-message-fade-leave-active {
     opacity: 0;
-    transform: translate(-50%, -100%);
-  }
+    -ms-transform: translate(-50%,-100%);
+    transform: translate(-50%,-100%)
 }

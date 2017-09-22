@@ -88,3 +88,9 @@ npm run build:aot
 # build publish package
 npm run lib
 ```
+
+# Thanks
+
+- The Vue [Element UI](https://github.com/ElemeFE/element)
+- The [Element Angular Version](https://github.com/eleme/element-angular)
+

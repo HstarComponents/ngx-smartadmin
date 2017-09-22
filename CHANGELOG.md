@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## v0.3.x (2017.09.x)
 
 - 新增 `sa-button, sa-form, sa-form-item` 组件
+- 修复 `sa-button` 点击事件重复触发问题
+- 新增 `MessageBox` 服务
 
 ## v0.3.0 (2017.09.20)
 

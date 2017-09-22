@@ -19,4 +19,3 @@
 
 | Name | Paramters | Description |
 | --- | --- | --- |
-| click | MouseEvent | 按钮被点击时触发 |
