@@ -27,12 +27,5 @@ export class ButtonComponent implements OnInit {
     return classArr.join(' ');
   }
 
-  @Output()
-  public click: EventEmitter<MouseEvent> = new EventEmitter();
-
   ngOnInit() { }
-
-  public handleClick(evt: MouseEvent) {
-    this.click.emit(evt);
-  }
 }
