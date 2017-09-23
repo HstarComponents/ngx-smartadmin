@@ -89,6 +89,10 @@ npm run build:aot
 npm run lib
 ```
 
+# Change logs
+
+[CHANGELOG.md](CHANGELOG.md)
+
 # Thanks
 
 - The Vue [Element UI](https://github.com/ElemeFE/element)

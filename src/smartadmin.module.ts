@@ -3,14 +3,12 @@ import './styl/all.styl';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ALL_COMPONENTS } from './components';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SERVICE_COMPONENTS } from './services';
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule

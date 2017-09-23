@@ -1,6 +1,6 @@
 {
   "name": "ngx-smartadmin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "The angular components with smartadmin.",
   "main": "lib/ngx-smartadmin.js",
   "types": "types",
