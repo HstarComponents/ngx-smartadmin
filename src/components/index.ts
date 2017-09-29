@@ -30,6 +30,7 @@ import { TableColumnDirective } from './table/table-column.directive';
 import { TableComponent } from './table/table.component';
 import { TabsetComponent } from './tabset/tabset.component';
 import { TreeComponent } from './tree/tree.component';
+import { TreeNodeComponent } from './tree/tree-node.component';
 import { WidgetComponent } from './widget/widget.component';
 import { WizardComponent } from './wizard/wizard.component';
 
@@ -66,5 +67,5 @@ export const ALL_COMPONENTS = [
 
   // 数据组件
   TableComponent, TableColumnDirective, TableCellDirective,
-  TreeComponent
+  TreeComponent, TreeNodeComponent
 ];

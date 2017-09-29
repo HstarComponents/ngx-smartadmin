@@ -1,0 +1,55 @@
+.sa-tree {
+}
+
+.sa-tree-node {
+  vertical-align: middle;
+  line-height: 34px;
+
+  &.level-2 {
+    padding-left: 16px;
+  }
+
+  &.level-3 {
+    padding-left: 32px;
+  }
+
+  &.level-4 {
+    padding-left: 48px;
+  }
+
+  .node-content {
+    height: 34px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(228, 232, 241);
+    }
+  }
+
+  .sa-tree-node-icon {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 8px;
+    border-width: 6px 0px 6px 7px;
+    border-style: solid;
+    transform: rotate(0deg);
+    border-color: transparent transparent transparent rgb(151, 168, 190);
+    border-image: initial;
+    transition: transform 0.3s ease-in-out;
+
+    &.is-leaf {
+      border-color: transparent;
+    }
+
+    &.expanded {
+      transform: rotate(90deg);
+    }
+  }
+
+  .sa-checkbox {
+    width: 24px;
+    height: 18px;
+    padding-left: 0;
+    display: inline-block;
+  }
+}

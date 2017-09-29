@@ -26,6 +26,7 @@ import {
   SwitchDemoComponent,
   TableDemoComponent,
   TabsetDemoComponent,
+  TreeDemoComponent,
   WidgetDemoComponent,
   WizardDemoComponent
 } from './pages';
@@ -54,6 +55,7 @@ const demoRoutes: Routes = [
 
   // Data
   { path: 'table', component: TableDemoComponent },
+  { path: 'tree', component: TreeDemoComponent },
 
   // Form Elements
   { path: 'autocomplete', component: AutocompleteDemoComponent },

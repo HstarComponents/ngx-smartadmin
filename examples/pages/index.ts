@@ -26,6 +26,7 @@ import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
 import { TableDemoComponent } from './table-demo/table-demo.component';
 import { TabsetDemoComponent } from './tabset-demo/tabset-demo.component';
+import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 import { WidgetDemoComponent } from './widget-demo/widget-demo.component';
 import { WizardDemoComponent } from './wizard-demo/wizard-demo.component';
 
@@ -55,6 +56,7 @@ export {
 
   // Data
   TableDemoComponent,
+  TreeDemoComponent,
 
   // 表单
   AutocompleteDemoComponent,
@@ -98,6 +100,7 @@ export const PAGE_COMPONENTS = [
 
   // Data
   TableDemoComponent,
+  TreeDemoComponent,
 
   // 表单
   AutocompleteDemoComponent,

@@ -6,8 +6,9 @@ export const menuData: Array<MenuItem> = [
     ]
   },
   {
-    text: 'Tables', icon: 'fa-table', subMenu: [
-      { text: 'Table', url: '/table' }
+    text: 'Datas', icon: 'fa-table', subMenu: [
+      { text: 'Table', url: '/table' },
+      { text: 'Tree', url: '/tree' }
     ]
   },
   {

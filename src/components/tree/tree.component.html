@@ -1,1 +1,4 @@
-<div class="tree"> Hello TreeComponent! </div>
+<div class="sa-tree">
+  <sa-tree-node *ngFor="let item of data" [treeNode]="item" [level]="level" [showCheckbox]="showCheckbox">
+  </sa-tree-node>
+</div>

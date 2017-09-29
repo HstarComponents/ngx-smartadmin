@@ -1,0 +1,11 @@
+<div class="sa-tree-node" [ngClass]="nodeClass">
+  <div class="node-content" (click)="handleNodeClick()">
+    <span class="sa-tree-node-icon" [ngClass]="{expanded: expanded, 'is-leaf': isLeaf}"></span>
+    <sa-checkbox *ngIf="showCheckbox"></sa-checkbox>
+    <span>{{treeNode.text}}</span>
+  </div>
+  <ng-container *ngIf="!isLeaf">
+    <sa-tree-node *ngFor="let item of treeNode.children" [level]="level+1" [treeNode]="item" [showCheckbox]="showCheckbox" [hidden]="!expanded">
+    </sa-tree-node>
+  </ng-container>
+</div>
