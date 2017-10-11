@@ -16,6 +16,7 @@ export const menuData: Array<MenuItem> = [
       { text: 'Autocomplete', url: '/autocomplete' },
       { text: 'Check Box', url: '/checkbox' },
       { text: 'Check Box Group', url: '/checkbox-group' },
+      { text: 'Date Picker', url: '/date-picker' },
       { text: 'Form', url: '/form' },
       { text: 'Input', url: '/input' },
       { text: 'Input Group', url: '/input-group' },
@@ -23,7 +24,8 @@ export const menuData: Array<MenuItem> = [
       { text: 'Radio Group', url: '/radio-group' },
       { text: 'Rating', url: '/rating' },
       { text: 'Select', url: '/select' },
-      { text: 'Switch', url: '/switch' }
+      { text: 'Switch', url: '/switch' },
+      { text: 'Time Picker', url: '/time-picker' }
     ]
   },
   {

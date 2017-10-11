@@ -7,6 +7,7 @@ import {
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
   CollapseBoxDemoComponent,
+  DatePickerDemoComponent,
   DemoContainerComponent,
   FormDemoComponent,
   HomeComponent,
@@ -26,6 +27,7 @@ import {
   SwitchDemoComponent,
   TableDemoComponent,
   TabsetDemoComponent,
+  TimePickerDemoComponent,
   TreeDemoComponent,
   WidgetDemoComponent,
   WizardDemoComponent
@@ -61,6 +63,7 @@ const demoRoutes: Routes = [
   { path: 'autocomplete', component: AutocompleteDemoComponent },
   { path: 'checkbox', component: CheckboxDemoComponent },
   { path: 'checkbox-group', component: CheckboxGroupDemoComponent },
+  { path: 'date-picker', component: DatePickerDemoComponent },
   { path: 'form', component: FormDemoComponent },
   { path: 'input', component: InputDemoComponent },
   { path: 'input-group', component: InputGroupDemoComponent },
@@ -69,6 +72,7 @@ const demoRoutes: Routes = [
   { path: 'rating', component: RatingDemoComponent },
   { path: 'select', component: SelectDemoComponent },
   { path: 'switch', component: SwitchDemoComponent },
+  { path: 'time-picker', component: TimePickerDemoComponent },
 
   // Services
   { path: 'message-box', component: MessageboxDemoComponent }

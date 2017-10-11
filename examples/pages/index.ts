@@ -7,6 +7,7 @@ import { CarouselDemoComponent } from './carousel-demo/carousel-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { CheckboxGroupDemoComponent } from './checkbox-group-demo/checkbox-group-demo.component';
 import { CollapseBoxDemoComponent } from './collapse-box-demo/collapse-box-demo.component';
+import { DatePickerDemoComponent } from './date-picker-demo/date-picker-demo.component';
 import { DemoContainerComponent } from './demo-container/demo-container.component';
 import { FormDemoComponent } from './form-demo/form-demo.component';
 import { HomeComponent } from './home/home.component';
@@ -26,6 +27,7 @@ import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
 import { TableDemoComponent } from './table-demo/table-demo.component';
 import { TabsetDemoComponent } from './tabset-demo/tabset-demo.component';
+import { TimePickerDemoComponent } from './time-picker-demo/time-picker-demo.component';
 import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 import { WidgetDemoComponent } from './widget-demo/widget-demo.component';
 import { WizardDemoComponent } from './wizard-demo/wizard-demo.component';
@@ -62,6 +64,7 @@ export {
   AutocompleteDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
+  DatePickerDemoComponent,
   FormDemoComponent,
   InputDemoComponent,
   InputGroupDemoComponent,
@@ -69,6 +72,7 @@ export {
   RadioGroupDemoComponent,
   RatingDemoComponent,
   SwitchDemoComponent,
+  TimePickerDemoComponent,
 
   // Services
   MessageboxDemoComponent
@@ -106,6 +110,7 @@ export const PAGE_COMPONENTS = [
   AutocompleteDemoComponent,
   CheckboxDemoComponent,
   CheckboxGroupDemoComponent,
+  DatePickerDemoComponent,
   FormDemoComponent,
   InputDemoComponent,
   InputGroupDemoComponent,
@@ -113,6 +118,7 @@ export const PAGE_COMPONENTS = [
   RadioGroupDemoComponent,
   RatingDemoComponent,
   SwitchDemoComponent,
+  TimePickerDemoComponent,
 
   // Services
   MessageboxDemoComponent
