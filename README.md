@@ -48,6 +48,7 @@ export class AppModule {
 - [ ] Autocomplete [Usage](src/components/autocomplete/README.md)
 - [x] CheckBox [Usage](src/components/checkbox/README.md)
 - [x] CheckBoxGroup [Usage](src/components/checkbox-group/README.md)
+- [ ] DatePicker [Usage](src/components/date-picker/README.md)
 - [x] Input [Usage](src/components/autocomplete/README.md)
 - [x] InputGroup [Usage](src/components/input-group/README.md)
 - [x] Radio [Usage](src/components/radio/README.md)
@@ -56,6 +57,7 @@ export class AppModule {
 - [x] Switch [Usage](src/components/switch/README.md)
 - [ ] Cascader [Usage](src/components/cascader/README.md)
 - [ ] Select [Usage](src/components/select/README.md)
+- [ ] TimePicker [Usage](src/components/time-picker/README.md)
 
 ## Date Elements
 

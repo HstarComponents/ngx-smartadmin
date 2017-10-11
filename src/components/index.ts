@@ -10,6 +10,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
 import { ColComponent } from './col/col.component';
 import { CollapseBoxComponent } from './collapse-box/collapse-box.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 import { FormComponent } from './form/form.component';
 import { FormItemComponent } from './form/form-item.component';
 import { ImageZoomComponent } from './image-zoom/image-zoom.component';
@@ -29,6 +30,7 @@ import { TableCellDirective } from './table/column-cell.directive';
 import { TableColumnDirective } from './table/table-column.directive';
 import { TableComponent } from './table/table.component';
 import { TabsetComponent } from './tabset/tabset.component';
+import { TimePickerComponent } from './time-picker/time-picker.component';
 import { TreeComponent } from './tree/tree.component';
 import { TreeNodeComponent } from './tree/tree-node.component';
 import { WidgetComponent } from './widget/widget.component';
@@ -39,6 +41,7 @@ export const ALL_COMPONENTS = [
   AutocompleteComponent,
   CascaderComponent,
   CheckboxComponent, CheckboxGroupComponent,
+  DatePickerComponent,
   FormComponent, FormItemComponent,
   InputComponent,
   InputGroupComponent,
@@ -46,6 +49,7 @@ export const ALL_COMPONENTS = [
   RatingComponent,
   SelectComponent,
   SwitchComponent,
+  TimePickerComponent,
 
   // 布局组件
   RowComponent,
