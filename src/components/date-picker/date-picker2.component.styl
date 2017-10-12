@@ -1,0 +1,105 @@
+.sa-date-picker2 {
+  position: relative;
+
+  input.form-control {
+    background: #fff;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .picker-panel {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .picker-panel-header {
+    position: relative;
+    height: 30px;
+    background: #393d49;
+    padding: 6px 8px;
+
+    > span {
+      color: #f6f6f6;
+      position: absolute;
+      font-size: 18px;
+      top: 2.5px;
+      cursor: pointer;
+    }
+
+    .prev-year {
+      left: 15px;
+    }
+
+    .prev-month {
+      left: 45px;
+    }
+
+    .next-month {
+      right: 45px;
+    }
+
+    .next-year {
+      right: 15px;
+    }
+
+    .set-year-month {
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+
+      >span {
+        color: #f6f6f6;
+      }
+    }
+  }
+
+  .picker-panel-content {
+    padding: 8px;
+    user-select: none;
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    border-bottom: none;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: center;
+      width: 36px;
+      height: 30px;
+    }
+
+    td {
+      cursor: pointer;
+      color: #666;
+
+      &:hover {
+        background-color: #eaeaea;
+        color: #333;
+      }
+
+      &.day-next, &.day-prev {
+        color: #d2d2d2;
+      }
+
+      &.day-selected {
+        background: #393d49;
+        color: #fff;
+      }
+
+      &.day-current {
+        border: 1px solid #393d49;
+      }
+    }
+  }
+}

@@ -1,1 +1,13 @@
-<div class="date-picker-demo"> Hello DatePickerDemoComponent! </div>
+<div class="page-date-picker-demo">
+  <sa-row [gutter]="20">
+    <sa-col [span]="6">
+      <sa-date-picker [(ngModel)]="d1"></sa-date-picker>
+    </sa-col>
+    <sa-col [span]="6">
+      <sa-date-picker mode="year" [(ngModel)]="d1"></sa-date-picker>
+    </sa-col>
+    <sa-col [span]="6">
+      {{d1}}
+    </sa-col>
+  </sa-row>
+</div>

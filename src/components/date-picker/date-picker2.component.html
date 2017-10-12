@@ -1,0 +1,49 @@
+<div class="sa-date-picker2">
+  <input class="form-control" (click)="showDatePicker()" readonly [ngModel]="innerDateString" [attr.placeholder]="placeholder"
+    (blur)="closeDatePicker()">
+  <span class="input-icon">
+    <i class="fa fa-calendar"></i>
+  </span>
+  <span class="input-icon">
+    <i class="fa fa-close" [hidden]="true"></i>
+  </span>
+  <div class="picker-panel" [hidden]="!pickerShown">
+    <div class="picker-panel-main">
+      <div class="picker-panel-header">
+        <span class="prev-year" (click)="changeYear(-1)">
+          <i class="fa fa-angle-double-left"></i>
+        </span>
+        <span class="prev-month" (click)="changeMonth(-1)">
+          <i class="fa fa-angle-left"></i>
+        </span>
+        <div class="set-year-month">
+          <span>{{currentYearMonth}}</span>
+        </div>
+        <span class="next-month" (click)="changeMonth(1)">
+          <i class="fa fa-angle-right"></i>
+        </span>
+        <span class="next-year" (click)="changeYear(1)">
+          <i class="fa fa-angle-double-right"></i>
+        </span>
+      </div>
+      <div class="picker-panel-content">
+        <table>
+          <thead>
+            <tr>
+              <th *ngFor="let item of labelObject.weekLabels">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let week of monthWeeks">
+              <td *ngFor="let d of week.days" [ngClass]="{'day-prev': d.isPrevMonth, 'day-next': d.isNextMonth, 'day-current': d.isCurrentDay, 'day-selected': d.isSelectedDay }"
+                (click)="selectDate(d)">{{d.number}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="picker-panel-footer">
+
+    </div>
+  </div>
+</div>
