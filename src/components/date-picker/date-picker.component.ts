@@ -1,8 +1,7 @@
 import './date-picker.component.styl';
 
-import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild, ViewEncapsulation, forwardRef } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-
 import { SaDate } from './SaDate';
 
 declare var laydate: any;
@@ -68,7 +67,6 @@ export class DatePickerComponent implements OnInit, OnChanges, ControlValueAcces
       showBottom: this.showBottom,
       format: this.format,
       done(value: string, date: any, endDate: any) {
-        console.log(value, date, endDate);
         let d = date.year ? new Date(date.year, date.month - 1, date.date, date.hours, date.minutes, date.seconds) : void (0);
         self.onChange(d);
       }
@@ -77,7 +75,6 @@ export class DatePickerComponent implements OnInit, OnChanges, ControlValueAcces
       opt.value = this.innerDate;
     }
     this.instance = laydate.render(opt);
-    console.log(window.a = this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges) {
