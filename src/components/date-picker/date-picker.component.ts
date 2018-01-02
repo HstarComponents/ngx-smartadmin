@@ -77,7 +77,6 @@ export class DatePickerComponent implements OnInit, OnChanges, ControlValueAcces
       opt.value = this.innerDate;
     }
     this.instance = laydate.render(opt);
-    console.log(window.a = this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges) {
