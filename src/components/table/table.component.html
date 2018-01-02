@@ -9,7 +9,7 @@
     <tr *ngFor="let row of innerSource, let idx = index" [ngClass]="{odd: idx % 2 === 0, even: idx % 2 === 1}" (click)="rowClick(row, $event)">
       <td *ngFor="let column of columns">
         <span *ngIf="!column.cellTemplate">{{row[column.field]}}</span>
-        <ng-template [ngIf]="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngOutletContext]="{ item: row, column: column }"></ng-template>
+        <ng-template [ngIf]="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngTemplateOutletContext]="{ item: row, column: column }"></ng-template>
       </td>
     </tr>
   </tbody>
